@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>銀河電腦城 | 自選砌機報價</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 導航列 -->
+  <header>
+    <div class="container">
+      <h1>銀河電腦城</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">電腦配件選購</a></li>
+          <li><a href="builder.html">自選砌機報價</a></li>
+          <li><a href="about.html">關於我們</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <h2>自選砌機報價系統</h2>
+      <form id="pc-builder">
+        <label>
+          CPU:
+          <select name="cpu" id="cpu">
+            <option value="0">-- 請選擇 --</option>
+            <option value="1800">Intel i5（$1800）</option>
+            <option value="2600">Intel i7（$2600）</option>
+            <option value="1400">AMD Ryzen 5（$1400）</option>
+            <option value="2200">AMD Ryzen 7（$2200）</option>
+          </select>
+        </label>
+        <label>
+          顯示卡:
+          <select name="gpu" id="gpu">
+            <option value="0">-- 請選擇 --</option>
+            <option value="3000">NVIDIA RTX 4060（$3000）</option>
+            <option value="4200">NVIDIA RTX 4070（$4200）</option>
+            <option value="2700">AMD RX 7600（$2700）</option>
+          </select>
+        </label>
+        <label>
+          記憶體:
+          <select name="ram" id="ram">
+            <option value="0">-- 請選擇 --</option>
+            <option value="400">DDR4 16GB（$400）</option>
+            <option value="800">DDR4 32GB（$800）</option>
+            <option value="700">DDR5 16GB（$700）</option>
+          </select>
+        </label>
+        <label>
+          儲存裝置:
+          <select name="storage" id="storage">
+            <option value="0">-- 請選擇 --</option>
+            <option value="350">SSD 512GB（$350）</option>
+            <option value="550">SSD 1TB（$550）</option>
+            <option value="900">SSD 2TB（$900）</option>
+            <option value="600">HDD 2TB（$600）</option>
+          </select>
+        </label>
+        <label>
+          電源供應器:
+          <select name="psu" id="psu">
+            <option value="0">-- 請選擇 --</option>
+            <option value="450">450W（$450）</option>
+            <option value="650">650W（$650）</option>
+            <option value="900">850W（$900）</option>
+          </select>
+        </label>
+        <label>
+          機箱:
+          <select name="case" id="case">
+            <option value="0">-- 請選擇 --</option>
+            <option value="400">標準 ATX（$400）</option>
+            <option value="600">高階 ATX（$600）</option>
+          </select>
+        </label>
+        <div class="total">
+          <span>總價：</span><span id="totalPrice">$0</span>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="container">&copy; 2025 銀河電腦城．版權所有</div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
