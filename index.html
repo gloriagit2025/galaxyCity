@@ -1,109 +1,110 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <title>銀河電腦城 | 產品目錄</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- 導航列 -->
-  <header>
-    <div class="container">
-      <h1>銀河電腦城</h1>
-      <nav>
+  <head>
+    <meta charset="UTF-8" />
+    <title>銀河電腦城 | 產品目錄</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 導航列 -->
+    <header>
+      <div class="container">
+        <h1>銀河電腦城</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">產品目錄</a></li>
+            <li><a href="builder.html">自選砌機報價</a></li>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="register.html">註冊</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-flex">
+      <!-- 側邊欄 -->
+      <aside class="sidebar">
         <ul>
-          <li><a href="index.html">產品目錄</a></li>
-          <li><a href="builder.html">自選砌機報價</a></li>
-          <li><a href="about.html">關於我們</a></li>
+          <li class="active" data-category="computer">電腦組件</li>
+          <li data-category="pc">電腦</li>
+          <li data-category="peripheral">電腦周邊</li>
+          <li data-category="digital">數碼周邊</li>
+          <li data-category="promo">最新推廣</li>
+          <li data-category="brand">品牌專區</li>
         </ul>
-      </nav>
-    </div>
-  </header>
+      </aside>
 
-  <main class="main-flex">
-    <!-- 側邊欄 -->
-    <aside class="sidebar">
-      <ul>
-        <li class="active" data-category="computer">電腦組件</li>
-        <li data-category="pc">電腦</li>
-        <li data-category="peripheral">電腦周邊</li>
-        <li data-category="digital">數碼周邊</li>
-        <li data-category="promo">最新推廣</li>
-        <li data-category="brand">品牌專區</li>
-      </ul>
-    </aside>
-
-    <!-- 內容區 -->
-    <section class="catalog-content">
-      <!-- 電腦組件（預設顯示） -->
-      <div class="category-panel" id="computer" style="display:block;">
-        <h2>電腦組件</h2>
-        <div class="component-grid">
-          <div>
-            <h3>中央處理器</h3>
-            <p>Intel &nbsp; AMD</p>
-          </div>
-          <div>
-            <h3>顯示卡</h3>
-            <p>GeForce &nbsp; AMD &nbsp; Intel &nbsp; Quadro</p>
-          </div>
-          <div>
-            <h3>記憶體 (RAM)</h3>
-            <p>DDR5 &nbsp; DDR4 &nbsp; SODIMM</p>
-          </div>
-          <div>
-            <h3>儲存裝置</h3>
-            <p>固態硬碟 (SSD) &nbsp; 硬碟 (HDD)</p>
-          </div>
-          <div>
-            <h3>主機板</h3>
-            <p>ATX &nbsp; MATX &nbsp; EATX &nbsp; ITX &nbsp; PCIE 擴展卡</p>
-          </div>
-          <div>
-            <h3>電腦散熱</h3>
-            <p>風冷、AIO水冷、散熱膏、機箱風扇</p>
-          </div>
-          <div>
-            <h3>機箱</h3>
-            <p>ATX、MATX、ITX、EATX、配件、RGB/LED燈條</p>
-          </div>
-          <div>
-            <h3>電源供應器</h3>
-            <p>600W或以下、650W-800W、850W-1000W、1050W-1200W、1250W或以上</p>
-          </div>
-          <div>
-            <h3>軟件</h3>
-            <p>作業系統、應用程式</p>
+      <!-- 內容區 -->
+      <section class="catalog-content">
+        <!-- 電腦組件（預設顯示） -->
+        <div class="category-panel" id="computer" style="display: block">
+          <h2>電腦組件</h2>
+          <div class="component-grid">
+            <div>
+              <h3>中央處理器</h3>
+              <p>Intel &nbsp; AMD</p>
+            </div>
+            <div>
+              <h3>顯示卡</h3>
+              <p>GeForce &nbsp; AMD &nbsp; Intel &nbsp; Quadro</p>
+            </div>
+            <div>
+              <h3>記憶體 (RAM)</h3>
+              <p>DDR5 &nbsp; DDR4 &nbsp; SODIMM</p>
+            </div>
+            <div>
+              <h3>儲存裝置</h3>
+              <p>固態硬碟 (SSD) &nbsp; 硬碟 (HDD)</p>
+            </div>
+            <div>
+              <h3>主機板</h3>
+              <p>ATX &nbsp; MATX &nbsp; EATX &nbsp; ITX &nbsp; PCIE 擴展卡</p>
+            </div>
+            <div>
+              <h3>電腦散熱</h3>
+              <p>風冷、AIO水冷、散熱膏、機箱風扇</p>
+            </div>
+            <div>
+              <h3>機箱</h3>
+              <p>ATX、MATX、ITX、EATX、配件、RGB/LED燈條</p>
+            </div>
+            <div>
+              <h3>電源供應器</h3>
+              <p>600W或以下、650W-800W、850W-1000W、1050W-1200W、1250W或以上</p>
+            </div>
+            <div>
+              <h3>軟件</h3>
+              <p>作業系統、應用程式</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- 其他分類預留，預設隱藏 -->
-      <div class="category-panel" id="pc">
-        <h2>電腦</h2>
-        <p>預設內容，請自行新增詳細分類。</p>
-      </div>
-      <div class="category-panel" id="peripheral">
-        <h2>電腦周邊</h2>
-        <p>預設內容，請自行新增詳細分類。</p>
-      </div>
-      <div class="category-panel" id="digital">
-        <h2>數碼周邊</h2>
-        <p>預設內容，請自行新增詳細分類。</p>
-      </div>
-      <div class="category-panel" id="promo">
-        <h2>最新推廣</h2>
-        <p>最新推廣活動、優惠詳情。</p>
-      </div>
-      <div class="category-panel" id="brand">
-        <h2>品牌專區</h2>
-        <p>各品牌專屬產品一覽。</p>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="container">&copy; 2025 銀河電腦城．版權所有</div>
-  </footer>
-  <script src="catalog.js"></script>
-</body>
+        <!-- 其他分類預留，預設隱藏 -->
+        <div class="category-panel" id="pc">
+          <h2>電腦</h2>
+          <p>預設內容，請自行新增詳細分類。</p>
+        </div>
+        <div class="category-panel" id="peripheral">
+          <h2>電腦周邊</h2>
+          <p>預設內容，請自行新增詳細分類。</p>
+        </div>
+        <div class="category-panel" id="digital">
+          <h2>數碼周邊</h2>
+          <p>預設內容，請自行新增詳細分類。</p>
+        </div>
+        <div class="category-panel" id="promo">
+          <h2>最新推廣</h2>
+          <p>最新推廣活動、優惠詳情。</p>
+        </div>
+        <div class="category-panel" id="brand">
+          <h2>品牌專區</h2>
+          <p>各品牌專屬產品一覽。</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">&copy; 2025 銀河電腦城．版權所有</div>
+    </footer>
+    <script src="catalog.js"></script>
+  </body>
 </html>
