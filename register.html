@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>銀河電腦城 | 用戶註冊</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 註冊表格專用設計（如無需額外，可直接放入 style.css） */
+    .register-container {
+      max-width: 420px;
+      margin: 3em auto 0 auto;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 2.2em 2em 1.5em 2em;
+    }
+    .register-container h2 {
+      margin-bottom: 1.5em;
+      color: #363d50;
+      text-align: center;
+    }
+    .register-form label {
+      display: block;
+      margin-bottom: 0.5em;
+      font-weight: bold;
+    }
+    .register-form input {
+      width: 100%;
+      padding: 0.7em 0.8em;
+      margin-bottom: 1.2em;
+      border: 1px solid #bbb;
+      border-radius: 7px;
+      font-size: 1em;
+      background: #f8fafc;
+    }
+    .register-form button {
+      width: 100%;
+      padding: 0.8em;
+      background: linear-gradient(90deg,#1d3557,#457b9d);
+      color: #fff;
+      font-size: 1.08em;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-top: 0.2em;
+      transition: background 0.2s;
+    }
+    .register-form button:hover {
+      background: linear-gradient(90deg,#457b9d,#1d3557);
+    }
+    .form-msg {
+      color: #e63946;
+      text-align: center;
+      margin-bottom: 1em;
+      font-size: 1em;
+    }
+    .register-link {
+      text-align: center;
+      margin-top: 1.5em;
+      font-size: 0.97em;
+    }
+    .register-link a {
+      color: #457b9d;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- 共用頂部導航列 -->
+  <header>
+    <div class="container">
+      <h1>銀河電腦城</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">產品目錄</a></li>
+          <li><a href="builder.html">自選砌機報價</a></li>
+          <li><a href="about.html">關於我們</a></li>
+          <li><a href="register.html">註冊</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 註冊表單區塊 -->
+  <div class="register-container">
+    <h2>用戶註冊</h2>
+    <!-- 錯誤/提示訊息 -->
+    <div class="form-msg" id="formMsg"></div>
+    <form class="register-form" id="registerForm" autocomplete="off">
+      <label for="username">用戶名稱 <span style="color:red">*</span></label>
+      <input type="text" id="username" name="username" required maxlength="18" placeholder="請輸入用戶名稱">
+      
+      <label for="email">電郵 <span style="color:red">*</span></label>
+      <input type="email" id="email" name="email" required placeholder="請輸入有效電郵">
+
+      <label for="password">密碼 <span style="color:red">*</span></label>
+      <input type="password" id="password" name="password" required minlength="6" placeholder="6字以上英數字">
+
+      <label for="confirmPassword">確認密碼 <span style="color:red">*</span></label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required minlength="6" placeholder="再次輸入密碼">
+
+      <button type="submit">註冊帳戶</button>
+    </form>
+    <div class="register-link">
+      已有帳戶？<a href="login.html">立即登入</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">&copy; 2025 銀河電腦城．版權所有</div>
+  </footer>
+
+  <script>
+    // 前端驗證表單提交
+    document.getElementById('registerForm').addEventListener('submit', function(e){
+      e.preventDefault(); // 防止直接送出表單
+
+      // 取出表單數值
+      const username = document.getElementById('username').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      let msg = '';
+      // 驗證資料
+      if(!username) {
+        msg = "請輸入用戶名稱";
+      } else if(!validateEmail(email)) {
+        msg = "請輸入正確電郵格式";
+      } else if(password.length < 6) {
+        msg = "密碼至少需6個字元";
+      } else if(password !== confirmPassword) {
+        msg = "兩次密碼不一致";
+      }
+
+      if(msg) {
+        document.getElementById('formMsg').textContent = msg;
+        return;
+      }
+
+      // 通過前端驗證，可送交後端（這裡用 alert 模擬成功）
+      document.getElementById('formMsg').style.color = '#457b9d';
+      document.getElementById('formMsg').textContent = "註冊成功！稍後可連接後端存資料。";
+      // 清空表單
+      this.reset();
+
+      // 可用 AJAX / fetch 提交資料到 API
+    });
+
+    // 驗證電郵格式
+    function validateEmail(email) {
+      // 最基本的 email 格式驗證
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+  </script>
+</body>
+</html>
