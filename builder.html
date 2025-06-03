@@ -1,173 +1,172 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <title>銀河電腦城 | 自選砌機報價</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* 特定自選砌機區塊美化 */
-    .builder-section {
-      max-width: 480px;
-      margin: 2em auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      padding: 2em 2.5em;
-    }
-    .builder-section h2 {
-      color: #1d3557;
-      margin-bottom: 1.2em;
-      text-align: center;
-    }
-    #pc-builder label {
-      display: block;
-      margin-bottom: 1.3em;
-      font-weight: bold;
-      font-size: 1.09em;
-      letter-spacing: 1px;
-    }
-    #pc-builder select {
-      display: block;
-      margin-top: 0.5em;
-      width: 100%;
-      padding: 0.4em 0.6em;
-      border-radius: 5px;
-      border: 1px solid #bbb;
-      font-size: 1em;
-      background: #f6f8fa;
-      transition: border 0.2s;
-    }
-    #pc-builder select:focus {
-      border: 1.5px solid #457b9d;
-      outline: none;
-    }
-    .total {
-      font-size: 1.25em;
-      color: #e63946;
-      margin-top: 1.8em;
-      text-align: right;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-    @media (max-width:600px){
-      .builder-section{
-        padding:1em 0.6em;
+  <head>
+    <meta charset="UTF-8" />
+    <title>銀河電腦城 | 自選砌機報價</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* 特定自選砌機區塊美化 */
+      .builder-section {
+        max-width: 480px;
+        margin: 2em auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+        padding: 2em 2.5em;
       }
-    }
-  </style>
-</head>
-<body>
-  <!-- 導航列 -->
-  <header>
-    <div class="container">
-      <h1>銀河電腦城</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">電腦配件選購</a></li>
-          <li><a href="builder.html">自選砌機報價</a></li>
-          <li><a href="about.html">關於我們</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+      .builder-section h2 {
+        color: #1d3557;
+        margin-bottom: 1.2em;
+        text-align: center;
+      }
+      #pc-builder label {
+        display: block;
+        margin-bottom: 1.3em;
+        font-weight: bold;
+        font-size: 1.09em;
+        letter-spacing: 1px;
+      }
+      #pc-builder select {
+        display: block;
+        margin-top: 0.5em;
+        width: 100%;
+        padding: 0.4em 0.6em;
+        border-radius: 5px;
+        border: 1px solid #bbb;
+        font-size: 1em;
+        background: #f6f8fa;
+        transition: border 0.2s;
+      }
+      #pc-builder select:focus {
+        border: 1.5px solid #457b9d;
+        outline: none;
+      }
+      .total {
+        font-size: 1.25em;
+        color: #e63946;
+        margin-top: 1.8em;
+        text-align: right;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+      @media (max-width: 600px) {
+        .builder-section {
+          padding: 1em 0.6em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 導航列 -->
+    <header>
+      <div class="container">
+        <h1>銀河電腦城</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">產品目錄</a></li>
+            <li><a href="builder.html">自選砌機報價</a></li>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="register.html">註冊</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <main>
-    <section class="builder-section">
-      <h2>自選砌機報價系統</h2>
-      <form id="pc-builder">
-        <!-- 每個零件一行，垂直排列 -->
-        <label>
-          CPU:
-          <select name="cpu" id="cpu">
-            <option value="0">-- 請選擇 --</option>
-            <option value="1800">Intel i5（$1800）</option>
-            <option value="2600">Intel i7（$2600）</option>
-            <option value="1400">AMD Ryzen 5（$1400）</option>
-            <option value="2200">AMD Ryzen 7（$2200）</option>
-          </select>
-        </label>
-        <label>
-          主機板:
-          <select name="mb" id="mb">
-            <option value="0">-- 請選擇 --</option>
-            <option value="900">ATX 主機板（$900）</option>
-            <option value="700">MATX 主機板（$700）</option>
-            <option value="1100">EATX 主機板（$1100）</option>
-            <option value="1000">ITX 主機板（$1000）</option>
-          </select>
-        </label>
-        <label>
-          顯示卡:
-          <select name="gpu" id="gpu">
-            <option value="0">-- 請選擇 --</option>
-            <option value="3000">NVIDIA RTX 4060（$3000）</option>
-            <option value="4200">NVIDIA RTX 4070（$4200）</option>
-            <option value="2700">AMD RX 7600（$2700）</option>
-          </select>
-        </label>
-        <label>
-          記憶體:
-          <select name="ram" id="ram">
-            <option value="0">-- 請選擇 --</option>
-            <option value="400">DDR4 16GB（$400）</option>
-            <option value="800">DDR4 32GB（$800）</option>
-            <option value="700">DDR5 16GB（$700）</option>
-          </select>
-        </label>
-        <label>
-          儲存裝置:
-          <select name="storage" id="storage">
-            <option value="0">-- 請選擇 --</option>
-            <option value="350">SSD 512GB（$350）</option>
-            <option value="550">SSD 1TB（$550）</option>
-            <option value="900">SSD 2TB（$900）</option>
-            <option value="600">HDD 2TB（$600）</option>
-          </select>
-        </label>
-        <label>
-          電源供應器:
-          <select name="psu" id="psu">
-            <option value="0">-- 請選擇 --</option>
-            <option value="450">450W（$450）</option>
-            <option value="650">650W（$650）</option>
-            <option value="900">850W（$900）</option>
-          </select>
-        </label>
-        <label>
-          機箱:
-          <select name="case" id="case">
-            <option value="0">-- 請選擇 --</option>
-            <option value="400">標準 ATX（$400）</option>
-            <option value="600">高階 ATX（$600）</option>
-          </select>
-        </label>
-        <div class="total">
-          總價：<span id="totalPrice">$0</span>
-        </div>
-      </form>
-    </section>
-  </main>
+    <main>
+      <section class="builder-section">
+        <h2>自選砌機報價系統</h2>
+        <form id="pc-builder">
+          <!-- 每個零件一行，垂直排列 -->
+          <label>
+            CPU:
+            <select name="cpu" id="cpu">
+              <option value="0">-- 請選擇 --</option>
+              <option value="1800">Intel i5（$1800）</option>
+              <option value="2600">Intel i7（$2600）</option>
+              <option value="1400">AMD Ryzen 5（$1400）</option>
+              <option value="2200">AMD Ryzen 7（$2200）</option>
+            </select>
+          </label>
+          <label>
+            主機板:
+            <select name="mb" id="mb">
+              <option value="0">-- 請選擇 --</option>
+              <option value="900">ATX 主機板（$900）</option>
+              <option value="700">MATX 主機板（$700）</option>
+              <option value="1100">EATX 主機板（$1100）</option>
+              <option value="1000">ITX 主機板（$1000）</option>
+            </select>
+          </label>
+          <label>
+            顯示卡:
+            <select name="gpu" id="gpu">
+              <option value="0">-- 請選擇 --</option>
+              <option value="3000">NVIDIA RTX 4060（$3000）</option>
+              <option value="4200">NVIDIA RTX 4070（$4200）</option>
+              <option value="2700">AMD RX 7600（$2700）</option>
+            </select>
+          </label>
+          <label>
+            記憶體:
+            <select name="ram" id="ram">
+              <option value="0">-- 請選擇 --</option>
+              <option value="400">DDR4 16GB（$400）</option>
+              <option value="800">DDR4 32GB（$800）</option>
+              <option value="700">DDR5 16GB（$700）</option>
+            </select>
+          </label>
+          <label>
+            儲存裝置:
+            <select name="storage" id="storage">
+              <option value="0">-- 請選擇 --</option>
+              <option value="350">SSD 512GB（$350）</option>
+              <option value="550">SSD 1TB（$550）</option>
+              <option value="900">SSD 2TB（$900）</option>
+              <option value="600">HDD 2TB（$600）</option>
+            </select>
+          </label>
+          <label>
+            電源供應器:
+            <select name="psu" id="psu">
+              <option value="0">-- 請選擇 --</option>
+              <option value="450">450W（$450）</option>
+              <option value="650">650W（$650）</option>
+              <option value="900">850W（$900）</option>
+            </select>
+          </label>
+          <label>
+            機箱:
+            <select name="case" id="case">
+              <option value="0">-- 請選擇 --</option>
+              <option value="400">標準 ATX（$400）</option>
+              <option value="600">高階 ATX（$600）</option>
+            </select>
+          </label>
+          <div class="total">總價：<span id="totalPrice">$0</span></div>
+        </form>
+      </section>
+    </main>
 
-  <footer>
-    <div class="container">&copy; 2025 銀河電腦城，版權所有</div>
-  </footer>
-  <script>
-    // 功能：每次選擇更改即時計算總價
-    const selects = document.querySelectorAll('#pc-builder select');
-    const totalPriceSpan = document.getElementById('totalPrice');
+    <footer>
+      <div class="container">&copy; 2025 銀河電腦城，版權所有</div>
+    </footer>
+    <script>
+      // 功能：每次選擇更改即時計算總價
+      const selects = document.querySelectorAll("#pc-builder select");
+      const totalPriceSpan = document.getElementById("totalPrice");
 
-    selects.forEach(select => {
-      select.addEventListener('change', calculateTotal);
-    });
-
-    function calculateTotal() {
-      let total = 0;
-      selects.forEach(select => {
-        total += parseInt(select.value, 10);
+      selects.forEach((select) => {
+        select.addEventListener("change", calculateTotal);
       });
-      totalPriceSpan.textContent = `$${total}`;
-    }
-    calculateTotal();
-  </script>
-</body>
+
+      function calculateTotal() {
+        let total = 0;
+        selects.forEach((select) => {
+          total += parseInt(select.value, 10);
+        });
+        totalPriceSpan.textContent = `$${total}`;
+      }
+      calculateTotal();
+    </script>
+  </body>
 </html>
