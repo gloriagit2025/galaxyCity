@@ -5,3 +5,5 @@ fetch("/database.json")
     newDiv.textContent = JSON.stringify(userData); // 確保顯示為字串
     document.body.appendChild(newDiv);
   })
+
+  

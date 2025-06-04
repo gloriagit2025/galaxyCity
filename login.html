@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .login-container{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .modal {
+        background-color: #f8fafc;
+        border-color;:#007bff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+      }
+      .form-container {
+        display: flex;
+        justify-content: center;
+      }
+      table {
+        width: 100%;
+        max-width: 300px;
+      }
+      td {
+        text-align: left;
+        padding: 0;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin: 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .login-btn {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        max-width: 300px;
+      }
+      .login-btn:hover {
+        background-color: #0056b3;
+      }
+      h2 {
+        font-family: 'Noto Serif TC', serif;
+        font-weight: bold;
+        color: #007bff;
+      }
+      .register-link {
+        margin-top: 10px;
+        font-size: 14px; /* 較小的字體 */
+        color: #007bff;
+        text-decoration: none;
+      }
+      .register-link:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 600px) {
+        .modal {
+          width: 95%;
+          padding: 15px;
+        }
+        table {
+          max-width: 100%;
+        }
+        .login-btn {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 共用頂部導航列 -->
+    <header>
+      <div class="container">
+        <h1>銀河電腦城</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">產品目錄</a></li>
+            <li><a href="builder.html">自選砌機報價</a></li>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="login.html">登入</a></li>
+            <li><a href="register.html">註冊</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="login-container">
+      <div class="modal">
+        <h2>登入</h2>
+        <div class="form-container">
+          <table>
+            <tr>
+              <td style="color: #007bff">用戶名:</td>
+            </tr>
+            <tr>
+              <td><input type="text" placeholder="輸入用戶名" /></td>
+            </tr>
+            <tr>
+              <td style="color: #007bff">密碼:</td>
+            </tr>
+            <tr>
+              <td><input type="password" placeholder="輸入密碼" /></td>
+            </tr>
+          </table>
+        </div>
+        <button class="login-btn">LOGIN</button>
+        <div>
+          <span style="color: #007bff; font-size: 14px">尚未成為會員?</span
+          ><a href="./register.html" class="register-link">立即註冊</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">&copy; 2025 銀河電腦城．版權所有</div>
+    </footer>
+  </body>
+</html>

@@ -78,6 +78,7 @@
           <li><a href="index.html">產品目錄</a></li>
           <li><a href="builder.html">自選砌機報價</a></li>
           <li><a href="about.html">關於我們</a></li>
+          <li><a href="login.html">登入</a></li>
           <li><a href="register.html">註冊</a></li>
         </ul>
       </nav>
@@ -123,7 +124,7 @@
       const email = document.getElementById('email').value.trim();
       const password = document.getElementById('password').value;
       const confirmPassword = document.getElementById('confirmPassword').value;
-
+      
       let msg = '';
       // 驗證資料
       if(!username) {
@@ -142,6 +143,11 @@
       }
 
       // 通過前端驗證，可送交後端（這裡用 alert 模擬成功）
+      const users=localStorage.getItem('users')?JSON.parse(localStorage.getItem('users')):[]
+      const newUser={"username":username,"email":email,"password":password}
+      users.push(newUser);
+      localStorage.setItem('users',JSON.stringify(users));
+      console.log(JSON.parse(localStorage.getItem('users')));
       document.getElementById('formMsg').style.color = '#457b9d';
       document.getElementById('formMsg').textContent = "註冊成功！稍後可連接後端存資料。";
       // 清空表單
