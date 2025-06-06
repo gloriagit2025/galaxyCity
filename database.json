@@ -72,49 +72,49 @@
     "description":"https://shop.pegasus.hk/products/209332/ASUS-%E8%8F%AF%E7%A2%A9-GeForce-GT-730-2G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
     "price":899 ,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/776f0823-5ff6-4a18-5bf3-bb23f60f0300/1600w"
-  }
+  },
   {
     "category": "顯示卡",
     "name": "ASUS 華碩 PHOENIX EVO Radeon RX 550 4G 顯示卡",
     "description":"https://shop.pegasus.hk/products/209678/ASUS-%E8%8F%AF%E7%A2%A9-PHOENIX-EVO-Radeon-RX-550-4G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
     "price":930 ,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/70626605-1cc1-4a87-3b75-7def33a39100/1600w"
-  }
+  },
   {
     "category": "儲存裝置",
     "name": "WD Green 240GB 545MB/s SATA SSD 2.5”/7mm Cased",
     "description":"https://shop.pegasus.hk/products/214429/WD-Green-240GB-545MBs-SATA-SSD-257mm-Cased",
     "price":168 ,
     "imgUrl": "https//pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/7e5a5c7b-1f31-40ad-bd97-962582c5c700/1600w"
-  }    
+  },   
   {
     "category": "儲存裝置",
     "name": "SanDisk SSD PLUS 240GB SATA III SSD",
     "description":"https://shop.pegasus.hk/products/217430/SanDisk-SSD-PLUS-240GB-SATA-III-SSD",
     "price":230 ,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/8bea000f-87db-47f6-bd8c-8a22bf30cc00/1600w"
-  }    
+  },  
   {
     "category": "儲存裝置",
     "name": "COLORFUL 七彩虹 SL500 256GB 3D TLC SATA III SSD",
     "description":"https://shop.pegasus.hk/products/218923/COLORFUL-%E4%B8%83%E5%BD%A9%E8%99%B9-SL500-256GB-3D-TLC-SATA-III-SSD",
     "price":249 ,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/79ce9c86-b91d-418a-cec1-28bb9962c000/1600w"
-  } 
+  },
   {
     "category": "儲存裝置",
     "name": "Solidigm P41 Plus 512GB PCIe 4.0 x4 NVMe M.2 2280 SSD",
     "description":"https://shop.pegasus.hk/products/223093/Solidigm-P41-Plus-512GB-PCIe-40-x4-NVMe-M2-2280-SSD",
     "price":279 ,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/12d90275-c4da-4dbb-7463-f3d9d460cd00/1600w"
-  }
+  },
   {
     "category": "主機板",
     "name": "GIGABYTE 技嘉 H510M H Micro-ATX 主機板 (DDR4)",
     "description":"https://shop.pegasus.hk/products/210897/GIGABYTE-%E6%8A%80%E5%98%89-H510M-H-Micro-ATX-%E4%B8%BB%E6%A9%9F%E6%9D%BF-DDR4",
     "price":399 ,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/91800e54-4fba-4f76-3b22-bad2f091b400/1600w"
-  }    
+  },  
   {
     "category": "主機板",
     "name": "ASRock 華擎 B560 Pro4 ATX 主機板 (DDR4)",
