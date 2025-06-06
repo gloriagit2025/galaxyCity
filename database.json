@@ -1,14 +1,37 @@
 [
   {
-    "category":"中央處理器",
+    "category": "中央處理器",
     "name": "Intel Core i5-12400",
+    "description":"核心數量:6\n執行緒總數:12\n最大超頻:4.40GHz\n處理器基礎功率:65W\n渦輪功率上限:117W",
     "price": 1150,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/888093b0-2729-45ef-1b17-8302a97dc800/1600w"
   },
   {
-    "category":"中央處理器",
+    "category": "中央處理器",
     "name": "Intel Core i5-14400",
+    "description":"核心數量:10\n執行緒總數:16\n最大超頻:4.70GHz\n處理器基礎功率:65W\n渦輪功率上限:148W",
     "price": 1399,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/88033919-9b3b-40f1-2fcd-e8d28f471200/1600w"
+  },
+  {
+    "category": "中央處理器",
+    "name": "Intel Core i5-14600K",
+    "description":"核心數量:14\n執行緒總數:20\n最大超頻:5.30GHz\n處理器基礎功率:125W\n渦輪功率上限:181W",
+    "price": 1699,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/5cc931f9-2679-466f-819c-3af46b900200/1600w"
+  },
+  {
+    "category": "中央處理器",
+    "name": "Intel Core i7-14700F",
+    "description":"核心數量:20\n執行緒總數:28\n最大超頻:5.40GHz\n處理器基礎功率:65W\n渦輪功率上限:219W",
+    "price": 2480,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/cbc461e8-c1e6-479c-9d01-e06ef9122600/1600w"
+  },
+  {
+    "category": "中央處理器",
+    "name": "Intel Core i9-14900F",
+    "description":"核心數量:24\n執行緒總數:32\n最大超頻:5.80GHz\n處理器基礎功率:65W\n渦輪功率上限:219W",
+    "price": 4199,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/cbc461e8-c1e6-479c-9d01-e06ef9122600/1600w"
   }
 ]
