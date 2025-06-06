@@ -109,3 +109,20 @@ footer {
   text-align: center;
   margin-top: 2em;
 }
+
+/* Footer 固定於頁面底部 */
+footer {
+  position: fixed;          /* 固定位置 */
+  bottom: 0;               /* 距離視窗底部 0 */
+  left: 0;                 /* 距離左邊 0 */
+  width: 100%;             /* 滿寬 */
+  background: #373c44;     /* 深色背景 */
+  color: #fff;             /* 白字 */
+  text-align: center;      /* 文字置中 */
+  padding: 0.8em 0;        /* 上下間距 */
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.3); /* 上面投影，提升層次 */
+  z-index: 1000;           /* 確保浮喺最上層 */
+  font-size: clamp(12px, 1.5vw, 18px); /* 響應式字體大小：
+                                        最小12px，最大18px，中間隨視窗寬度變化 */
+  letter-spacing: 1px;     /* 字距 */
+}
