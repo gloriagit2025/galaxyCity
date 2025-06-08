@@ -105,7 +105,7 @@
     "category": "儲存裝置",
     "name": "Solidigm P41 Plus 512GB PCIe 4.0 x4 NVMe M.2 2280 SSD",
     "description":"https://shop.pegasus.hk/products/223093/Solidigm-P41-Plus-512GB-PCIe-40-x4-NVMe-M2-2280-SSD",
-    "price":279 ,
+    "price":279,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/12d90275-c4da-4dbb-7463-f3d9d460cd00/1600w"
   },
   {
@@ -121,5 +121,5 @@
     "description":"https://shop.pegasus.hk/products/206882/ASRock-%E8%8F%AF%E6%93%8E-B560-Pro4-ATX-%E4%B8%BB%E6%A9%9F%E6%9D%BF-DDR4",
     "price":470,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/84418102-e2a0-4380-7e40-b82959545400/1600w"
-  }    
+  }
 ]

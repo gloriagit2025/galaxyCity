@@ -9,30 +9,33 @@ fetch("database.json") //請求讀取該檔案
       //遍歷每個產品
       let newDiv = document.createElement("div"); //創建div元素
       newDiv.classList.add("row"); //屬性添加bootstrap row
-      newDiv.innerHTML = `<img class="col-3" src="${data.imgUrl}" alt="${data.name}">
+      newDiv.innerHTML =
+        `<img class="col-3" src="${data.imgUrl}" alt="${data.name}">
        <div class="col-3">
         <div>${data.name}</div>
         <div>HK$${data.price}</div>
-        <button onclick="addToCart('${data.name}')">加入購物車</button>
+        <button onclick='addToCart(${JSON.stringify(data)})'>加入購物車</button>
        </div>`;
       productPanel.appendChild(newDiv);
     });
   });
-function addToCart(productName) {//加入購物車
+function addToCart(product) {//加入購物車
   //查找產品名字在購物車的序列
   let indexInCartProductList = cartProductList.findIndex(
-    (value) => value.name === productName
+    (value) => value.name === product.name
   );
-  console.log(indexInCartProductList);
   //如購物車內沒有該產品名字則index為-1並添加該產品進購物車列表
   if (indexInCartProductList < 0) {
     //購物車列表加入該產品名字和數量為1
-  cartProductList.push({
-    name: productName,
-    quantity: 1,
-  });
+    cartProductList.push({
+      name: product.name,
+      imgUrl: product.imgUrl,
+      price: product.price,
+      quantity: 1
+    });
   }
-  else{
+  else {
     cartProductList[indexInCartProductList].quantity++;//購物車列表內已有產品名字的數量增加
   }
+  localStorage.setItem("cartProductList", JSON.stringify(cartProductList)); //將購物車列表存入localStorage
 }
