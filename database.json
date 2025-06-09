@@ -36,24 +36,24 @@
   },
   {
     "category": "顯示卡",
-    "name": "ASUS 華碩 PHEONIX GeForce GTX 1630 4G 顯示卡",
-    "description": "https://shop.pegasus.hk/products/210050/ASUS-%E8%8F%AF%E7%A2%A9-PHEONIX-GeForce-GTX-1630-4G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
-    "price": 1399,
-    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/343def66-1af6-4594-6b1e-061e1d5fb900/1600w"
+    "name": "ASUS 華碩 PHOENIX-P GeForce GTX 1650 4G OC 顯示卡",
+    "description": "NVIDIA CUDA® 核心:896\n加速時脈 (MHz):1665\n基礎時脈 (MHz):1485\n記憶體規格:4GB GDDR5",
+    "price": 980,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/e7b4f46c-f1a3-4ec4-3b81-845cf45ed600/1600w"
   },
   {
     "category": "顯示卡",
-    "name": "SAPPHIRE 藍寶石 PULSE Radeon RX 6400 4G 顯示卡",
-    "description": "https://shop.pegasus.hk/products/208819/SAPPHIRE-%E8%97%8D%E5%AF%B6%E7%9F%B3-PULSE-Radeon-RX-6400-4G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
-    "price": 999,
-    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/4dd015de-fdcc-40f3-b0c6-83e4666d3700/1600w"
+    "name": "MSI 微星 VENTUS 2X GeForce RTX 3050 6G OC 顯示卡",
+    "description": "NVIDIA CUDA® 核心:2304\n加速時脈 (MHz):1470\n基礎時脈 (MHz):1040\n記憶體規格:6GB GDDR6",
+    "price": 1350,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/f17ec245-713a-4769-453e-e9fc7b402900/1600w"
   },
   {
     "category": "顯示卡",
-    "name": "GIGABYTE 技嘉 Low Profile GeForce GT 1030 2GB 顯示卡",
-    "description": "https://shop.pegasus.hk/products/209661/GIGABYTE-%E6%8A%80%E5%98%89-Low-Profile-GeForce-GT-1030-2GB-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
-    "price": 699,
-    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/e61ff960-c009-4c9a-2f89-3cf97e1f1a00/1600w"
+    "name": "ZOTAC GAMING Twin Edge GeForce RTX 4060 8G 顯示卡",
+    "description": "NVIDIA CUDA® 核心:3072\n加速時脈 (MHz):2460\n基礎時脈 (MHz):1830\n記憶體規格:6GB GDDR6",
+    "price": 2299,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/fafaf05c-d967-45b9-ce8d-804954fbc700/1600w"
   },
   {
     "category": "顯示卡",
