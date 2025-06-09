@@ -119,6 +119,51 @@
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 導航列 -->
+    <header>
+      <div class="container">
+        <h1>銀河電腦城</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">主頁</a></li>
+            <li><a href="productList.html">產品目錄</a></li>
+            <li><a href="builder.html">自選砌機報價</a></li>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="login.html">登入</a></li>
+            <li><a href="register.html">註冊</a></li>
+            <li><img src="shopping_cart.jpeg" height="40" onclick="window.location.href='cartPage.html'" style="cursor: pointer;"></li>
+            </a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-flex">
+      <!-- 側邊欄 -->
+      <aside class="sidebar">
+        <ul>
+          <li class="active" data-category="中央處理器">中央處理器</li>
+          <li data-category="顯示卡">顯示卡</li>
+          <li data-category="記憶體 (RAM)">記憶體 (RAM)</li>
+          <li data-category="儲存裝置">儲存裝置</li>
+          <li data-category="主機板">主機板</li>
+          <li data-category="電腦散熱">電腦散熱</li>
+          <li data-category="電源">電源</li>
+          <li data-category="機箱">機箱</li>
+          <li data-category="手提電腦">手提電腦</li>
+        </ul>
+      </aside>
+
+      <!-- 內容區 -->
+      <section id="productPanel">
+      </section>
+    </main>
+    <footer>
+      <div class="container">&copy; 2025 銀河電腦城．版權所有</div>
+    </footer>
     <script src="productListScript.js"></script>
   </body>
 </html>
