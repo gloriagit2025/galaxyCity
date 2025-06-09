@@ -1,337 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>銀河電腦城 | 首頁</title>
-</head>
-    <!DOCTYPE html>
-    <html lang="zh-Hant">
-        <style>
-          * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
-    
-          body {
-            font-family: 'Noto Sans TC', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-          }
-    
-          .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-          }
-    
-          /* Header Styles (Retained) */
-          header {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 1rem 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          }
-    
-          header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          }
-    
-          header h1 {
-            font-size: 2rem;
-            font-weight: 700;
-          }
-    
-          header nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-          }
-    
-          header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-          }
-    
-          header nav ul li a:hover {
-            color: #00b4d8;
-          }
-    
-          /* Carousel Styles */
-          .carousel {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-            margin: 2rem 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-          }
-    
-          .carousel-inner {
-            display: flex;
-            width: 300%;
-            height: 100%;
-            transition: transform 0.5s ease-in-out;
-          }
-    
-          .carousel-item {
-            flex: 0 0 33.33%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-          }
-    
-          .carousel-item h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 1rem 2rem;
-            border-radius: 5px;
-          }
-    
-          .carousel-controls {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-          }
-    
-          .carousel-controls button {
-            background: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: #fff;
-            font-size: 2rem;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            transition: background 0.3s;
-          }
-    
-          .carousel-controls button:hover {
-            background: rgba(0, 0, 0, 0.8);
-          }
-    
-          .carousel-dots {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            text-align: center;
-          }
-    
-          .carousel-dots .dot {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            background: #fff;
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-            opacity: 0.5;
-            transition: opacity 0.3s;
-          }
-    
-          .carousel-dots .dot.active {
-            opacity: 1;
-            background: #00b4d8;
-          }
-    
-          /* Featured Products */
-          .featured-products {
-            padding: 2rem 0;
-            text-align: center;
-          }
-    
-          .featured-products h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #1a1a1a;
-          }
-    
-          .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-          }
-    
-          .product-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            padding: 1rem;
-            text-align: center;
-            transition: transform 0.3s;
-          }
-    
-          .product-card:hover {
-            transform: translateY(-5px);
-          }
-    
-          .product-card img {
-            max-width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 5px;
-          }
-    
-          .product-card h3 {
-            font-size: 1.2rem;
-            margin: 0.5rem 0;
-          }
-    
-          .product-card p {
-            color: #00b4d8;
-            font-weight: 600;
-          }
-    
-          /* Footer Styles (Retained) */
-          footer {
-            background-color: #1a1a1a;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-          }
-    
-          /* Responsive Design */
-          @media (max-width: 768px) {
-            header .container {
-              flex-direction: column;
-              text-align: center;
-            }
-    
-            header nav ul {
-              flex-direction: column;
-              gap: 0.5rem;
-              margin-top: 1rem;
-            }
-    
-            .carousel {
-              height: 300px;
-            }
-    
-            .carousel-item h2 {
-              font-size: 1.5rem;
-            }
-          }
-        </style>
-      </head>
-      <body>
-        <!-- 導航列 (Retained) -->
-        <header>
-          <div class="container">
-            <h1>銀河電腦城</h1>
-            <nav>
-              <ul>
-                <li><a href="index.html">主頁</a></li>
-                <li><a href="index.html">產品目錄</a></li>
-                <li><a href="builder.html">自選砌機報價</a></li>
-                <li><a href="about.html">關於我們</a></li>
-                <li><a href="login.html">登入</a></li>
-                <li><a href="register.html">註冊</a></li>
-                <li><img src="./shopping_cart.jpeg" height="40" width=""></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-    
-        <main>
-          <!-- Carousel Section -->
-          <section class="carousel">
-            <div class="carousel-inner" id="carouselInner">
-              <div class="carousel-item" style="background-image: url(./img/ai_pc001.jpeg)">
-                <h2>最新高性能顯示卡</h2>
-              </div>
-              <div class="carousel-item" style="background-image: url('https://via.placeholder.com/1200x500?text=旗艦級CPU')">
-                <h2>旗艦級CPU促銷</h2>
-              </div>
-              <div class="carousel-item" style="background-image: url('https://via.placeholder.com/1200x500?text=電競周邊')">
-                <h2>電競周邊優惠</h2>
-              </div>
-            </div>
-            <div class="carousel-controls">
-              <button onclick="moveCarousel(-1)">&#10094;</button>
-              <button onclick="moveCarousel(1)">&#10095;</button>
-            </div>
-            <div class="carousel-dots">
-              <span class="dot active" onclick="setCarousel(0)"></span>
-              <span class="dot" onclick="setCarousel(1)"></span>
-              <span class="dot" onclick="setCarousel(2)"></span>
-            </div>
-          </section>
-    
-          <!-- Featured Products Section -->
-          <section class="featured-products">
-            <div class="container">
-              <h2>精選產品</h2>
-              <div class="product-grid">
-                <div class="product-card">
-                  <img src="https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/fed3d3b9-00e1-4064-4f33-0c21e021f800/320w" alt="顯示卡" />
-                  <h3>GeForce RTX 4090</h3>
-                  <p>HK$12,999</p>
-                </div>
-                <div class="product-card">
-                  <img src="https://via.placeholder.com/250x150?text=CPU" alt="CPU" />
-                  <h3>Intel Core i9-13900K</h3>
-                  <p>HK$4,799</p>
-                </div>
-                <div class="product-card">
-                  <img src="https://via.placeholder.com/250x150?text=SSD" alt="SSD" />
-                  <h3>Samsung 990 Pro 1TB</h3>
-                  <p>HK$1,199</p>
-                </div>
-                <div class="product-card">
-                  <img src="https://via.placeholder.com/250x150?text=機箱" alt="機箱" />
-                  <h3>Lian Li PC-O11</h3>
-                  <p>HK$1,499</p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-    
-        <!-- 頁尾 (Retained) -->
-        <footer>
-          <div class="container">© 2025 銀河電腦城．版權所有</div>
-        </footer>
-    
-        <script>
-          let currentIndex = 0;
-          const carouselInner = document.getElementById('carouselInner');
-          const dots = document.querySelectorAll('.carousel-dot');
-    
-          function updateCarousel() {
-            carouselInner.style.transform = `translateX(-${currentIndex * 33.33}%)`;
-            document.querySelectorAll('.carousel-dots .dot').forEach((dot, index) => {
-              dot.classList.toggle('active', index === currentIndex);
-            });
-          }
-    
-          function moveCarousel(direction) {
-            currentIndex = (currentIndex + direction + 3) % 3;
-            updateCarousel();
-          }
-    
-          function setCarousel(index) {
-            currentIndex = index;
-            updateCarousel();
-          }
-    
-          // Auto-play carousel
-          setInterval(() => moveCarousel(1), 5000);
-        </script>
-      </body>
-    </html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>銀河電腦城 | 產品目錄</title>
 
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <style>
+      .text-car {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 導航列 -->
+
+    <header class="sticky-top">
+      <!-- collapse container -->
+      <div class="container container-fluid" id="collapseCon">
+        <h1 class="nav_h1" style="font-size: 30px">
+          <img class="icon" src="./img/companyIcon.gif" alt="Company Icon" />
+          <a href="index.html" style="text-decoration: none; color: white"
+            >銀河電腦城</a
+          >
+        </h1>
+        <div>
+          <a href="cartPage.html"
+            ><img src="./img/shoppingCart.png" height="40"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- normal container -->
+      <div class="container" id="normalCon">
+        <h1 class="nav_h1">
+          <img class="icon" src="./img/companyIcon.gif" alt="Company Icon" />
+          <a href="index.html" style="text-decoration: none; color: white"
+            >銀河電腦城</a
+          >
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">主頁</a></li>
+            <li><a href="productList.html">產品目錄</a></li>
+            <li><a href="builder.html">自選砌機報價</a></li>
+            <li><a href="about.html">關於我們</a></li>
+            <li>
+              <a href="login.html">登入</a> | <a href="register.html">註冊</a>
+            </li>
+            <li>
+              <a href="cartPage.html"
+                ><img src="./img/shoppingCart.png" height="40"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- 導航列end -->
+
+    <main>
+      <!-- 導航列extent -->
+      <div class="collapse colbar" id="navbarToggleExternalContent">
+        <ul>
+          <li><a href="index.html">主頁</a></li>
+          <li><a href="productList.html">產品目錄</a></li>
+          <li><a href="builder.html">自選砌機報價</a></li>
+          <li><a href="about.html">關於我們</a></li>
+          <li>
+            <a href="login.html">登入</a> |
+            <a href="register.html">註冊</a>
+          </li>
+        </ul>
+      </div>
+      <!-- 導航列end extent -->
+
+      <!-- 輪播 文字-->
+      <div
+        id="carouselExampleFade_text"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div
+          class="carousel-inner"
+          style="background-color: rgb(180, 203, 203)"
+        >
+          <div class="carousel-item active text-car">
+            <p class="d-block w-100 text-center">
+              ~~ 每月優惠 多款電腦零件產品 限定熱賣 立即搜購 ~~
+            </p>
+          </div>
+          <div class="carousel-item text-car">
+            <p class="d-block w-100 text-center">高性能電腦產品</p>
+          </div>
+          <div class="carousel-item text-car">
+            <p class="d-block w-100 text-center">最新電腦配件</p>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade_text"
+          data-bs-slide="prev"
+        >
+          <!-- <span style="color: black;"><</span> -->
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade_text"
+          data-bs-slide="next"
+        >
+          <!-- <span  style="color:black;">></span> -->
+        </button>
+      </div>
+
+      <!-- 輪播 相片-->
+      <div
+        id="carouselExampleFade"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/cpu.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="./img/dc.png" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="./img/index_aipc.jpeg" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </main>
+
+    <!-- 頁尾 (Retained) -->
+    <footer>
+      <div class="container">© 2025 銀河電腦城．版權所有</div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

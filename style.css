@@ -1,14 +1,15 @@
 body {
-  font-family: 'Segoe UI', Arial, '微軟正黑體', sans-serif;
+  font-family: "Segoe UI", Arial, "微軟正黑體", sans-serif;
   margin: 0;
   background: #f5f6fa;
 }
 
 header {
-  background: linear-gradient(90deg, #373c44 60%, #485067 100%);
+  background: linear-gradient(90deg, #03090d 20%, #5c3a4f 100%);
   color: #fff;
   padding: 1.2em 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-height: 10vh;
 }
 header .container {
   width: 90%;
@@ -17,14 +18,11 @@ header .container {
   align-items: center;
   justify-content: space-between;
 }
-header h1 {
-  font-size: 2em;
-  margin: 0;
-}
+
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2em;
+  gap: 1em;
   padding: 0;
   margin: 0;
 }
@@ -48,7 +46,7 @@ nav a:hover {
   width: 180px;
   background: #ececec;
   border-radius: 10px 0 0 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   margin-right: 2em;
 }
 .sidebar ul {
@@ -75,7 +73,7 @@ nav a:hover {
   flex: 1 1 auto;
   background: #fff;
   border-radius: 0 12px 12px 0;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
   padding: 2em 2em 2em 2em;
   min-height: 520px;
 }
@@ -83,7 +81,8 @@ nav a:hover {
 .category-panel {
   display: none;
 }
-.category-panel[style*="block"], .category-panel:target {
+.category-panel[style*="block"],
+.category-panel:target {
   display: block;
 }
 .component-grid {
@@ -102,27 +101,62 @@ nav a:hover {
   font-size: 1em;
 }
 
+/* Footer 固定於頁面底部 */
 footer {
-  background: #373c44;
-  color: #fff;
-  padding: 1.2em 0;
-  text-align: center;
+  min-height: 5vh;
+  bottom: 0; /* 距離視窗底部 0 */
+  left: 0; /* 距離左邊 0 */
+  width: 100%; /* 滿寬 */
+  background: #03090d; /* 深色背景 */
+  color: #fff; /* 白字 */
+  text-align: center; /* 文字置中 */
+  padding: 0.8em 0; /* 上下間距 */
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3); /* 上面投影，提升層次 */
+  z-index: 1000; /* 確保浮喺最上層 */
+  font-size: clamp(
+    12px,
+    1.5vw,
+    18px
+  ); /* 響應式字體大小：
+                                        最小12px，最大18px，中間隨視窗寬度變化 */
+  letter-spacing: 1px; /* 字距 */
   margin-top: 2em;
 }
 
-/* Footer 固定於頁面底部 */
-footer {
-  position: fixed;          /* 固定位置 */
-  bottom: 0;               /* 距離視窗底部 0 */
-  left: 0;                 /* 距離左邊 0 */
-  width: 100%;             /* 滿寬 */
-  background: #373c44;     /* 深色背景 */
-  color: #fff;             /* 白字 */
-  text-align: center;      /* 文字置中 */
-  padding: 0.8em 0;        /* 上下間距 */
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.3); /* 上面投影，提升層次 */
-  z-index: 1000;           /* 確保浮喺最上層 */
-  font-size: clamp(12px, 1.5vw, 18px); /* 響應式字體大小：
-                                        最小12px，最大18px，中間隨視窗寬度變化 */
-  letter-spacing: 1px;     /* 字距 */
+.icon {
+  height: 40px;
+}
+.nav_h1 {
+  display: flex;
+  font-size: 2em;
+  margin: 0;
+}
+
+.container nav ul li {
+  align-content: center;
+}
+
+@media (min-width: 800px) {
+  #collapseCon {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  #normalCon {
+    display: none;
+  }
+}
+
+.colbar {
+  background-color: #947889;
+  color: white;
+}
+.colbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  min-height: 85vh;
 }

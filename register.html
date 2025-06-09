@@ -1,169 +1,279 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <title>銀河電腦城 | 用戶註冊</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* 註冊表格專用設計（如無需額外，可直接放入 style.css） */
-    .register-container {
-      max-width: 420px;
-      margin: 3em auto 0 auto;
-      background: #fff;
-      border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      padding: 2.2em 2em 1.5em 2em;
-    }
-    .register-container h2 {
-      margin-bottom: 1.5em;
-      color: #363d50;
-      text-align: center;
-    }
-    .register-form label {
-      display: block;
-      margin-bottom: 0.5em;
-      font-weight: bold;
-    }
-    .register-form input {
-      width: 100%;
-      padding: 0.7em 0.8em;
-      margin-bottom: 1.2em;
-      border: 1px solid #bbb;
-      border-radius: 7px;
-      font-size: 1em;
-      background: #f8fafc;
-    }
-    .register-form button {
-      width: 100%;
-      padding: 0.8em;
-      background: linear-gradient(90deg,#1d3557,#457b9d);
-      color: #fff;
-      font-size: 1.08em;
-      border: none;
-      border-radius: 7px;
-      cursor: pointer;
-      font-weight: bold;
-      letter-spacing: 1px;
-      margin-top: 0.2em;
-      transition: background 0.2s;
-    }
-    .register-form button:hover {
-      background: linear-gradient(90deg,#457b9d,#1d3557);
-    }
-    .form-msg {
-      color: #e63946;
-      text-align: center;
-      margin-bottom: 1em;
-      font-size: 1em;
-    }
-    .register-link {
-      text-align: center;
-      margin-top: 1.5em;
-      font-size: 0.97em;
-    }
-    .register-link a {
-      color: #457b9d;
-      text-decoration: underline;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <!-- 共用頂部導航列 -->
-  <header>
-    <div class="container">
-      <h1>銀河電腦城</h1>
-      <nav>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <title>銀河電腦城 | 會員登入</title>
+    <style>
+      .login-container {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .login-form {
+        background-color: #f8fafc;
+        border-color: #007bff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .form-container {
+        display: flex;
+        justify-content: center;
+      }
+      table {
+        width: 100%;
+        max-width: 300px;
+      }
+      td {
+        text-align: left;
+        padding: 0;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        width: 100%;
+        padding: 8px;
+        margin: 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .login-btn {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        max-width: 300px;
+      }
+      .login-btn:hover {
+        background-color: #0056b3;
+      }
+
+      .register-link {
+        margin-top: 10px;
+        font-size: 14px; /* 較小的字體 */
+        color: #007bff;
+        text-decoration: none;
+      }
+      .register-link:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 600px) {
+        .modal {
+          width: 95%;
+          padding: 15px;
+        }
+        table {
+          max-width: 100%;
+        }
+        .login-btn {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 導航列 -->
+
+    <header class="sticky-top">
+      <!-- collapse container -->
+      <div class="container container-fluid" id="collapseCon">
+        <h1 class="nav_h1" style="font-size: 30px">
+          <img class="icon" src="./img/companyIcon.gif" alt="Company Icon" />
+          <a href="index.html" style="text-decoration: none; color: white"
+            >銀河電腦城</a
+          >
+        </h1>
+        <div>
+          <a href="cartPage.html"
+            ><img src="./img/shoppingCart.png" height="40"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- normal container -->
+      <div class="container" id="normalCon">
+        <h1 class="nav_h1">
+          <img class="icon" src="./img/companyIcon.gif" alt="Company Icon" />
+          <a href="index.html" style="text-decoration: none; color: white"
+            >銀河電腦城</a
+          >
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">主頁</a></li>
+            <li><a href="productList.html">產品目錄</a></li>
+            <li><a href="builder.html">自選砌機報價</a></li>
+            <li><a href="about.html">關於我們</a></li>
+            <li>
+              <a href="login.html">登入</a> | <a href="register.html">註冊</a>
+            </li>
+            <li>
+              <a href="cartPage.html"
+                ><img src="./img/shoppingCart.png" height="40"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- 導航列end -->
+
+    <main>
+      <!-- 導航列extent -->
+      <div class="collapse colbar" id="navbarToggleExternalContent">
         <ul>
-          <li><a href="index.html">產品目錄</a></li>
+          <li><a href="index.html">主頁</a></li>
+          <li><a href="productList.html">產品目錄</a></li>
           <li><a href="builder.html">自選砌機報價</a></li>
           <li><a href="about.html">關於我們</a></li>
-          <li><a href="login.html">登入</a></li>
-          <li><a href="register.html">註冊</a></li>
-          <a href="cart.html" class="cart-link">
-              🛒 購物車 <span id="cart-count">0</span>
-            </a>
+          <li>
+            <a href="login.html">登入</a> |
+            <a href="register.html">註冊</a>
+          </li>
         </ul>
-      </nav>
-    </div>
-  </header>
+      </div>
+      <!-- 導航列end extent -->
+      <div class="login-container">
+        <div class="login-form">
+          <h3 style="color: #363d50">用戶註冊</h3>
+          <br />
+          <div class="form-container">
+            <table>
+              <tr>
+                <td style="color: #363d50">
+                  <label for="username"
+                    >用戶名稱 <span style="color: red">*</span></label
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    required
+                    maxlength="18"
+                    placeholder="請輸入用戶名稱"
+                  />
+                </td>
+              </tr>
 
-  <!-- 註冊表單區塊 -->
-  <div class="register-container">
-    <h2>用戶註冊</h2>
-    <!-- 錯誤/提示訊息 -->
-    <div class="form-msg" id="formMsg"></div>
-    <form class="register-form" id="registerForm" autocomplete="off">
-      <label for="username">用戶名稱 <span style="color:red">*</span></label>
-      <input type="text" id="username" name="username" required maxlength="18" placeholder="請輸入用戶名稱">
-      
-      <label for="email">電郵 <span style="color:red">*</span></label>
-      <input type="email" id="email" name="email" required placeholder="請輸入有效電郵">
+              <tr>
+                <td style="color: #363d50">
+                  <label for="email"
+                    >電郵 <span style="color: red">*</span></label
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                 <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="請輸入有效電郵"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td style="color: #363d50">
+                  <label for="password"
+                    >密碼 <span style="color: red">*</span></label
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                    minlength="6"
+                    placeholder="6字以上英數字"
+                  />
+                </td>
+              </tr>
 
-      <label for="password">密碼 <span style="color:red">*</span></label>
-      <input type="password" id="password" name="password" required minlength="6" placeholder="6字以上英數字">
+              <tr>
+                <td style="color: #363d50">
+                  <label for="confirmPassword"
+                    >確認密碼 <span style="color: red">*</span></label
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    required
+                    minlength="6"
+                    placeholder="再次輸入密碼"
+                  />
+                </td>
+              </tr>
 
-      <label for="confirmPassword">確認密碼 <span style="color:red">*</span></label>
-      <input type="password" id="confirmPassword" name="confirmPassword" required minlength="6" placeholder="再次輸入密碼">
+            </table>
+          </div>
+          <button class="login-btn" type="submit">註冊帳戶</button>
+          <br />
+          <br />
+          <div>
+            <span style="color: #363d50; font-size: 14px">已有帳戶？?</span
+            ><a href="login.html" class="register-link"><b>立即登入</b></a>
+          </div>
+        </div>
+      </div>
+    </main>
 
-      <button type="submit">註冊帳戶</button>
-    </form>
-    <div class="register-link">
-      已有帳戶？<a href="login.html">立即登入</a>
-    </div>
-  </div>
+    <!-- 頁尾  -->
+    <footer>
+      <div class="container">© 2025 銀河電腦城．版權所有</div>
+    </footer>
 
-  <footer>
-    <div class="container">&copy; 2025 銀河電腦城．版權所有</div>
-  </footer>
-
-  <script>
-    // 前端驗證表單提交
-    document.getElementById('registerForm').addEventListener('submit', function(e){
-      e.preventDefault(); // 防止直接送出表單
-
-      // 取出表單數值
-      const username = document.getElementById('username').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const password = document.getElementById('password').value;
-      const confirmPassword = document.getElementById('confirmPassword').value;
-      
-      let msg = '';
-      // 驗證資料
-      if(!username) {
-        msg = "請輸入用戶名稱";
-      } else if(!validateEmail(email)) {
-        msg = "請輸入正確電郵格式";
-      } else if(password.length < 6) {
-        msg = "密碼至少需6個字元";
-      } else if(password !== confirmPassword) {
-        msg = "兩次密碼不一致";
-      }
-
-      if(msg) {
-        document.getElementById('formMsg').textContent = msg;
-        return;
-      }
-
-      // 通過前端驗證，可送交後端（這裡用 alert 模擬成功）
-      const users=localStorage.getItem('users')?JSON.parse(localStorage.getItem('users')):[]
-      const newUser={"username":username,"email":email,"password":password}
-      users.push(newUser);
-      localStorage.setItem('users',JSON.stringify(users));
-      console.log(JSON.parse(localStorage.getItem('users')));
-      document.getElementById('formMsg').style.color = '#457b9d';
-      document.getElementById('formMsg').textContent = "註冊成功！稍後可連接後端存資料。";
-      // 清空表單
-      this.reset();
-
-      // 可用 AJAX / fetch 提交資料到 API
-    });
-
-    // 驗證電郵格式
-    function validateEmail(email) {
-      // 最基本的 email 格式驗證
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-  </script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
