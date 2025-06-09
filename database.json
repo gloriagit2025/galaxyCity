@@ -2,124 +2,253 @@
   {
     "category": "中央處理器",
     "name": "Intel Core i5-12400",
-    "description":"核心數量:6\n執行緒總數:12\n最大超頻:4.40GHz\n處理器基礎功率:65W\n渦輪功率上限:117W",
+    "description": "核心數量:6\n執行緒總數:12\n最大超頻:4.40GHz\n處理器基礎功率:65W\n渦輪功率上限:117W",
     "price": 1150,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/888093b0-2729-45ef-1b17-8302a97dc800/1600w"
   },
   {
     "category": "中央處理器",
     "name": "Intel Core i5-14400",
-    "description":"核心數量:10\n執行緒總數:16\n最大超頻:4.70GHz\n處理器基礎功率:65W\n渦輪功率上限:148W",
+    "description": "核心數量:10\n執行緒總數:16\n最大超頻:4.70GHz\n處理器基礎功率:65W\n渦輪功率上限:148W",
     "price": 1399,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/88033919-9b3b-40f1-2fcd-e8d28f471200/1600w"
   },
   {
     "category": "中央處理器",
     "name": "Intel Core i5-14600K",
-    "description":"核心數量:14\n執行緒總數:20\n最大超頻:5.30GHz\n處理器基礎功率:125W\n渦輪功率上限:181W",
+    "description": "核心數量:14\n執行緒總數:20\n最大超頻:5.30GHz\n處理器基礎功率:125W\n渦輪功率上限:181W",
     "price": 1699,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/5cc931f9-2679-466f-819c-3af46b900200/1600w"
   },
   {
     "category": "中央處理器",
     "name": "Intel Core i7-14700F",
-    "description":"核心數量:20\n執行緒總數:28\n最大超頻:5.40GHz\n處理器基礎功率:65W\n渦輪功率上限:219W",
+    "description": "核心數量:20\n執行緒總數:28\n最大超頻:5.40GHz\n處理器基礎功率:65W\n渦輪功率上限:219W",
     "price": 2480,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/cbc461e8-c1e6-479c-9d01-e06ef9122600/1600w"
   },
   {
     "category": "中央處理器",
     "name": "Intel Core i9-14900F",
-    "description":"核心數量:24\n執行緒總數:32\n最大超頻:5.80GHz\n處理器基礎功率:65W\n渦輪功率上限:219W",
+    "description": "核心數量:24\n執行緒總數:32\n最大超頻:5.80GHz\n處理器基礎功率:65W\n渦輪功率上限:219W",
     "price": 4199,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/cbc461e8-c1e6-479c-9d01-e06ef9122600/1600w"
   },
   {
     "category": "顯示卡",
     "name": "ASUS 華碩 PHEONIX GeForce GTX 1630 4G 顯示卡",
-    "description":"https://shop.pegasus.hk/products/210050/ASUS-%E8%8F%AF%E7%A2%A9-PHEONIX-GeForce-GTX-1630-4G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
-    "price":1399 ,
+    "description": "https://shop.pegasus.hk/products/210050/ASUS-%E8%8F%AF%E7%A2%A9-PHEONIX-GeForce-GTX-1630-4G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
+    "price": 1399,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/343def66-1af6-4594-6b1e-061e1d5fb900/1600w"
-
   },
   {
     "category": "顯示卡",
     "name": "SAPPHIRE 藍寶石 PULSE Radeon RX 6400 4G 顯示卡",
-    "description":"https://shop.pegasus.hk/products/208819/SAPPHIRE-%E8%97%8D%E5%AF%B6%E7%9F%B3-PULSE-Radeon-RX-6400-4G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
-    "price":999 ,
+    "description": "https://shop.pegasus.hk/products/208819/SAPPHIRE-%E8%97%8D%E5%AF%B6%E7%9F%B3-PULSE-Radeon-RX-6400-4G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
+    "price": 999,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/4dd015de-fdcc-40f3-b0c6-83e4666d3700/1600w"
-
   },
   {
     "category": "顯示卡",
     "name": "GIGABYTE 技嘉 Low Profile GeForce GT 1030 2GB 顯示卡",
-    "description":"https://shop.pegasus.hk/products/209661/GIGABYTE-%E6%8A%80%E5%98%89-Low-Profile-GeForce-GT-1030-2GB-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
-    "price":699 ,
+    "description": "https://shop.pegasus.hk/products/209661/GIGABYTE-%E6%8A%80%E5%98%89-Low-Profile-GeForce-GT-1030-2GB-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
+    "price": 699,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/e61ff960-c009-4c9a-2f89-3cf97e1f1a00/1600w"
-
   },
   {
     "category": "顯示卡",
     "name": "MSI 微星 GeForce GT 710 1G 顯示卡",
-    "description":"https://shop.pegasus.hk/products/205869/MSI-%E5%BE%AE%E6%98%9F-GeForce-GT-710-1G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
-    "price":429 ,
+    "description": "https://shop.pegasus.hk/products/205869/MSI-%E5%BE%AE%E6%98%9F-GeForce-GT-710-1G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
+    "price": 429,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/c9c2d9bf-a9c1-4068-6f62-c399e7ac0700/1600w"
-
   },
   {
     "category": "顯示卡",
     "name": "ASUS 華碩 GeForce GT 730 2G 顯示卡",
-    "description":"https://shop.pegasus.hk/products/209332/ASUS-%E8%8F%AF%E7%A2%A9-GeForce-GT-730-2G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
-    "price":899 ,
+    "description": "https://shop.pegasus.hk/products/209332/ASUS-%E8%8F%AF%E7%A2%A9-GeForce-GT-730-2G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
+    "price": 899,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/776f0823-5ff6-4a18-5bf3-bb23f60f0300/1600w"
   },
   {
     "category": "顯示卡",
     "name": "ASUS 華碩 PHOENIX EVO Radeon RX 550 4G 顯示卡",
-    "description":"https://shop.pegasus.hk/products/209678/ASUS-%E8%8F%AF%E7%A2%A9-PHOENIX-EVO-Radeon-RX-550-4G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
-    "price":930 ,
+    "description": "https://shop.pegasus.hk/products/209678/ASUS-%E8%8F%AF%E7%A2%A9-PHOENIX-EVO-Radeon-RX-550-4G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
+    "price": 930,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/70626605-1cc1-4a87-3b75-7def33a39100/1600w"
   },
   {
     "category": "儲存裝置",
     "name": "WD Green 240GB 545MB/s SATA SSD 2.5”/7mm Cased",
-    "description":"https://shop.pegasus.hk/products/214429/WD-Green-240GB-545MBs-SATA-SSD-257mm-Cased",
-    "price":168 ,
+    "description": "https://shop.pegasus.hk/products/214429/WD-Green-240GB-545MBs-SATA-SSD-257mm-Cased",
+    "price": 168,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/7e5a5c7b-1f31-40ad-bd97-962582c5c700/1600w"
-  },   
+  },
   {
     "category": "儲存裝置",
     "name": "SanDisk SSD PLUS 240GB SATA III SSD",
-    "description":"https://shop.pegasus.hk/products/217430/SanDisk-SSD-PLUS-240GB-SATA-III-SSD",
-    "price":230 ,
+    "description": "https://shop.pegasus.hk/products/217430/SanDisk-SSD-PLUS-240GB-SATA-III-SSD",
+    "price": 230,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/8bea000f-87db-47f6-bd8c-8a22bf30cc00/1600w"
-  },  
+  },
   {
     "category": "儲存裝置",
     "name": "COLORFUL 七彩虹 SL500 256GB 3D TLC SATA III SSD",
-    "description":"https://shop.pegasus.hk/products/218923/COLORFUL-%E4%B8%83%E5%BD%A9%E8%99%B9-SL500-256GB-3D-TLC-SATA-III-SSD",
-    "price":249 ,
+    "description": "https://shop.pegasus.hk/products/218923/COLORFUL-%E4%B8%83%E5%BD%A9%E8%99%B9-SL500-256GB-3D-TLC-SATA-III-SSD",
+    "price": 249,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/79ce9c86-b91d-418a-cec1-28bb9962c000/1600w"
   },
   {
     "category": "儲存裝置",
     "name": "Solidigm P41 Plus 512GB PCIe 4.0 x4 NVMe M.2 2280 SSD",
-    "description":"https://shop.pegasus.hk/products/223093/Solidigm-P41-Plus-512GB-PCIe-40-x4-NVMe-M2-2280-SSD",
-    "price":279,
+    "description": "https://shop.pegasus.hk/products/223093/Solidigm-P41-Plus-512GB-PCIe-40-x4-NVMe-M2-2280-SSD",
+    "price": 279,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/12d90275-c4da-4dbb-7463-f3d9d460cd00/1600w"
   },
   {
     "category": "主機板",
     "name": "GIGABYTE 技嘉 H510M H Micro-ATX 主機板 (DDR4)",
-    "description":"https://shop.pegasus.hk/products/210897/GIGABYTE-%E6%8A%80%E5%98%89-H510M-H-Micro-ATX-%E4%B8%BB%E6%A9%9F%E6%9D%BF-DDR4",
-    "price":399 ,
+    "description": "https://shop.pegasus.hk/products/210897/GIGABYTE-%E6%8A%80%E5%98%89-H510M-H-Micro-ATX-%E4%B8%BB%E6%A9%9F%E6%9D%BF-DDR4",
+    "price": 399,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/91800e54-4fba-4f76-3b22-bad2f091b400/1600w"
-  },  
+  },
   {
     "category": "主機板",
     "name": "ASRock 華擎 B560 Pro4 ATX 主機板 (DDR4)",
-    "description":"https://shop.pegasus.hk/products/206882/ASRock-%E8%8F%AF%E6%93%8E-B560-Pro4-ATX-%E4%B8%BB%E6%A9%9F%E6%9D%BF-DDR4",
-    "price":470,
+    "description": "https://shop.pegasus.hk/products/206882/ASRock-%E8%8F%AF%E6%93%8E-B560-Pro4-ATX-%E4%B8%BB%E6%A9%9F%E6%9D%BF-DDR4",
+    "price": 470,
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/84418102-e2a0-4380-7e40-b82959545400/1600w"
+  },
+  {
+    "category": "主機板",
+    "name": "MSI 微星 PRO B650M-B Micro-ATX 主機板 (DDR5)",
+    "description": "https://shop.pegasus.hk/products/218394/MSI-%E5%BE%AE%E6%98%9F-PRO-B650M-B-Micro-ATX-%E4%B8%BB%E6%A9%9F%E6%9D%BF-DDR5",
+    "price": 699,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/0fc90932-9fb4-4b17-cb73-4a5a508d9a00/1600w"
+  },
+  {
+    "category": "主機板",
+    "name": "Colorful BATTLE-AX B650M-PLUS WIFI V15 Micro-ATX 主機板 (DDR5)",
+    "description": "https://shop.pegasus.hk/products/211709/ASRock-%E8%8F%AF%E6%93%8E-B760M-PRO-RSD4-WIFI-Micro-ATX-%E7%99%BD%E8%89%B2%E4%B8%BB%E6%A9%9F%E6%9D%BF-DDR4",
+    "price": 699,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/72fdf86b-a338-4865-643a-b1b051e2f100/1600w"
+  },
+  {
+    "category": "電腦散熱",
+    "name": "ADATA XPG VENTO PRO 120 PWM 120MM 風扇",
+    "description": "https://shop.pegasus.hk/products/208500/ADATA-XPG-VENTO-PRO-120-PWM-120MM-%E9%A2%A8%E6%89%87",
+    "price": 119,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/1da12dde-5a2f-4d83-7d7a-8d5b88b28500/1600w"
+  },
+  {
+    "category": "電腦散熱",
+    "name": "DEEPCOOL AG620 ARGB 風冷散熱器 - Black 黑色",
+    "description": "https://shop.pegasus.hk/products/221982/DEEPCOOL-AG620-ARGB-%E9%A2%A8%E5%86%B7%E6%95%A3%E7%86%B1%E5%99%A8---Black-%E9%BB%91%E8%89%B2",
+    "price": 299,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/2d8dba1c-b24c-4220-9622-8c47651b3200/1600w"
+  },
+  {
+    "category": "電腦散熱",
+    "name": "MSI 微星 MAG CORELIQUID A13 240mm 水冷散熱器",
+    "description": "https://shop.pegasus.hk/products/222089/MSI-%E5%BE%AE%E6%98%9F-MAG-CORELIQUID-A13-240mm-%E6%B0%B4%E5%86%B7%E6%95%A3%E7%86%B1%E5%99%A8",
+    "price": 409,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/9ce82cd7-a70b-43cd-0088-8ccc68d7e300/1600w"
+  },
+  {
+    "category": "電腦散熱",
+    "name": "ID-COOLING DK-19 PWM 風冷散熱器",
+    "description": "https://shop.pegasus.hk/products/216211/ID-COOLING-DK-19-PWM-%E9%A2%A8%E5%86%B7%E6%95%A3%E7%86%B1%E5%99%A8",
+    "price": 129,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/7aa75e9c-c67b-463a-b9e4-88dfaaa9ff00/1600w"
+  },
+  {
+    "category": "電源",
+    "name": "MSI 微星 MAG A750BN 750W 80Plus Bronze 銅牌 火牛 (5年保)",
+    "description": "https://shop.pegasus.hk/products/216239/MSI-%E5%BE%AE%E6%98%9F-MAG-A750BN-750W-80Plus-Bronze-%E9%8A%85%E7%89%8C-%E7%81%AB%E7%89%9B-5%E5%B9%B4%E4%BF%9D",
+    "price": 399,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/0a99c19b-9018-4a9b-c33f-6c29d43b8a00/1600w"
+  },
+  {
+    "category": "電源",
+    "name": "MSI 微星 MAG A650BNL 650W 80Plus Bronze 銅牌 火牛 (5年保)",
+    "description": "https://shop.pegasus.hk/search?searchKey=%25E9%259B%25BB%25E6%25BA%2590",
+    "price": 299,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/8f41c205-aa84-4b9c-e01c-d960b0aa5600/1600w"
+  },
+  {
+    "category": "電源",
+    "name": "MSI 微星 MAG A550BN 550W 80Plus Bronze 銅牌 火牛 (5年保)",
+    "description": "https://shop.pegasus.hk/products/207220/MSI-%E5%BE%AE%E6%98%9F-MAG-A550BN-550W-80Plus-Bronze-%E9%8A%85%E7%89%8C-%E7%81%AB%E7%89%9B-5%E5%B9%B4%E4%BF%9D",
+    "price": 329,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/a3c6de83-2117-4905-40a9-500da25cb300/1600w"
+  },
+  {
+    "category": "電源",
+    "name": "英規電源線 (英式三腳插頭) UK Standard Power Cord",
+    "description": "https://shop.pegasus.hk/products/206756/%E8%8B%B1%E8%A6%8F%E9%9B%BB%E6%BA%90%E7%B7%9A-%E8%8B%B1%E5%BC%8F%E4%B8%89%E8%85%B3%E6%8F%92%E9%A0%AD-UK-Standard-Power-Cord",
+    "price": 40,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/3af9d7ae-fd6c-4e6f-43ab-706b97f1f600/1600w"
+  },
+  {
+    "category": "機箱",
+    "name": "Darkflash DB330M Mesh Micro-ATX 機箱 - Black 黑色",
+    "description": "https://shop.pegasus.hk/products/222678/Darkflash-DB330M-Mesh-Micro-ATX-%E6%A9%9F%E7%AE%B1---Black-%E9%BB%91%E8%89%B2",
+    "price": 269,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/20314349-74bc-43a3-6f43-c9e9803ac800/1600w"
+  },
+  {
+    "category": "機箱",
+    "name": "【支援MATX背插底板】 ASUS 華碩 A21 Micro-ATX 機箱 - Black 黑色",
+    "description": "https://shop.pegasus.hk/products/214553/ASUS-%E8%8F%AF%E7%A2%A9-A21-Micro-ATX-%E6%A9%9F%E7%AE%B1---Black-%E9%BB%91%E8%89%B2",
+    "price": 599,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/eb2bac2d-46a6-41c9-1056-30e3abafac00/1600w"
+  },
+  {
+    "category": "機箱",
+    "name": "Darkflash DS900 GLASS ATX 機箱 - Black 黑色 (不含風扇)",
+    "description": "https://shop.pegasus.hk/products/221183/Darkflash-DS900-GLASS-ATX-%E6%A9%9F%E7%AE%B1---Black-%E9%BB%91%E8%89%B2-%E4%B8%8D%E5%90%AB%E9%A2%A8%E6%89%87",
+    "price": 499,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/3bd8a4d0-5ea2-4d4a-50e9-cc21553b0b00/1600w"
+  },
+  {
+    "category": "機箱",
+    "name": "MSI 微星 MAG FORGE 130A AIRFLOW ATX 機箱",
+    "description": "https://shop.pegasus.hk/products/224903/MSI-%E5%BE%AE%E6%98%9F-MAG-FORGE-130A--AIRFLOW-ATX-%E6%A9%9F%E7%AE%B1",
+    "price": 279,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/c2b3d39a-a8bc-4b3b-de78-6329d4f20b00/1600w"
+  },
+  {
+    "category": "手提電腦",
+    "name": "【送原廠無線滑鼠+電腦袋】 Chuwi CoreBook X i5 筆記型電腦 (14吋 / WQHD [2160*1440] / Core i5-12450H / 16GB DDR4 RAM / 512GB SSD / WiFi 6 / Windows 11 Home) - 2160 x 1440",
+    "description": "https://shop.pegasus.hk/products/218393/Chuwi-CoreBook-X-i5-%E7%AD%86%E8%A8%98%E5%9E%8B%E9%9B%BB%E8%85%A6--14%E5%90%8B--WQHD-21601440--Core-i5-12450H--16GB-DDR4-RAM--512GB-SSD--WiFi-6--Windows-11-Home---2160-x-1440",
+    "price": 3099,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/d4f5baf2-39f0-4302-d521-dee36a663e00/1600w"
+  },
+  {
+    "category": "手提電腦",
+    "name": "【送原廠無線滑鼠+電腦袋】 Chuwi MiniBook X 筆記型電腦 (10.51吋 / FHD / Alder Lake N100 / 12GB LPDDR4X RAM / 512GB SSD / WiFi 6 / Windows 11 Home)",
+    "description": "https://shop.pegasus.hk/products/214784/Chuwi-MiniBook-X-%E7%AD%86%E8%A8%98%E5%9E%8B%E9%9B%BB%E8%85%A6--1051%E5%90%8B--FHD--Alder-Lake-N100--12GB-LPDDR4X-RAM--512GB-SSD--WiFi-6--Windows-11-Home",
+    "price": 2499,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/f19e5ace-c9fb-4d18-c03a-5adb35170c00/1600w"
+  },
+  {
+    "category": "手提電腦",
+    "name": "Chuwi GemiBook X Pro N150 筆記型電腦 (14.1吋 / FHD / Intel Alder Lake N150 / 16GB LPDDR5 RAM / 256GB SSD / WiFi 6 / Windows 11 Home)",
+    "description": "https://shop.pegasus.hk/products/224316/Chuwi-GemiBook-X-Pro-N150-%E7%AD%86%E8%A8%98%E5%9E%8B%E9%9B%BB%E8%85%A6-141%E5%90%8B--FHD--Intel-Alder-Lake-N150--16GB-LPDDR5-RAM--256GB-SSD--WiFi-6--Windows-11-Home",
+    "price": 2199,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/88bf5e0c-401d-468d-f909-9898c4bbc000/1600w"
+  },
+  {
+    "category": "手提電腦",
+    "name": "【送原廠無線滑鼠+電腦袋】 Chuwi CoreBook X Pro 筆記型電腦 (15.6吋 / FHD IPS / Core i5-12450H / 16GB DDR4 RAM / 512GB SSD / WiFi 6 / Windows 11 Home) - 1920 x 1080",
+    "description": "https://shop.pegasus.hk/products/220360/Chuwi-CoreBook-X-Pro-%E7%AD%86%E8%A8%98%E5%9E%8B%E9%9B%BB%E8%85%A6--156%E5%90%8B--FHD-IPS--Core-i5-12450H--16GB-DDR4-RAM--512GB-SSD--WiFi-6--Windows-11-Home---1920-x-1080",
+    "price": 3399,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/c444f6ac-3bea-4533-c0db-536044f52f00/1600w"
+  },
+  {
+    "category": "手提電腦",
+    "name": "Chuwi CoreBook X i3-1220P 筆記型電腦 (14吋 / WQHD / Core i3-1220P / 16GB DDR4 RAM / 512GB SSD / WiFi 6 / Windows 11 Home) - 2160 x 1440",
+    "description": "https://shop.pegasus.hk/products/222161/Chuwi-CoreBook-X-i3-1220P-%E7%AD%86%E8%A8%98%E5%9E%8B%E9%9B%BB%E8%85%A6--14%E5%90%8B--WQHD--Core-i3-1220P--16GB-DDR4-RAM--512GB-SSD--WiFi-6--Windows-11-Home---2160-x-1440",
+    "price": 2799,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/bdb78176-4656-4c6a-cba3-57d2814f6100/1600w"
   }
 ]
