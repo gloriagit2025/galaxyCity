@@ -70,6 +70,41 @@
     "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/5c6c68ff-cb89-4343-eb15-a97368ea2f00/1600w"
   },
   {
+    "category": "記憶體 (RAM)",
+    "name": "Netac Shadow II 16GB (8GB x 2) DDR4 3200MHz Black (w/ Heatsink)",
+    "description": "商品特色\nDDR4\n3200MHz\n16GB",
+    "price": 329,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/e74a622a-f50a-4953-fc86-6d82a78a8500/1600w"
+  },
+  {
+    "category": "記憶體 (RAM)",
+    "name": "Kingston FURY BEAST RGB DDR4 32GB (16GB x2) 3200MHz CL16",
+    "description": "商品特色\nKingston FURY™ CTRL 的 RGB 燈效\nIntel® XMP Certified 和相容於 AMD Ryzen™\n速度高達 3733MT/s*，套組儲存容量高達 128GB",
+    "price": 640,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/41f261f7-3924-4d88-e3ca-9619984ce800/1600w"
+  },
+  {
+    "category": "記憶體 (RAM)",
+    "name": "Kingston FURY Beast DDR5 32GB (16GB x 2) 6000MHz CL30 - AMD EXPO",
+    "description": "商品特色\n4800MT/s 以上的絕佳效能\nIntel® XMP 3.0 認證\nAMD EXPO™ 認證\n速度高達 6800MT/s*、套組儲存容量高達 128GB",
+    "price": 899,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/30eb258b-3b5e-4d29-2367-23bd9bfe1100/1600w"
+  },
+  {
+    "category": "記憶體 (RAM)",
+    "name": "G.Skill Trident Z5 ROYAL RGB Silver 32GB (16GB x 2) DDR5 6800MHz CL34 - Intel XMP 3.0",
+    "description": "商品特色\nDDR5-6800 CL34-45-45-108 1.40V\n32GB (2x16GB)\nIntel XMP",
+    "price": 1180,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/6fca08a8-04bf-416b-c143-1a21539a9200/1600w"
+  },
+  {
+    "category": "記憶體 (RAM)",
+    "name": "Corsair VENGEANCE RGB DDR5 White 64GB (32GB x 2) 6000MHz CL30 - AMD EXPO",
+    "description": "商品特色\nDDR5-6000 CL30 - AMD EXPO\n64GB (2x32GB)\nIntel XMP",
+    "price": 1699,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/b07066ca-73d9-4815-67c9-a39b5d5f8a00/1600w"
+  },
+  {
     "category": "儲存裝置",
     "name": "MSI 微星 SPATIUM M390 1TB PCIe 3.0 x4 NVMe M.2 2280 SSD",
     "description": "商品特色\nSEQUENTIAL READ UP TO (MB/S): 3300\nSEQUENTIAL WRITE UP TO (MB/S): 3000\nRANDOM READ 4KB UP TO (IOPS): 420,000\nRANDOM WRITE 4KB UP TO (IOPS): 550,000",
