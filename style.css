@@ -7,7 +7,7 @@ body {
 header {
   background: linear-gradient(90deg, #03090d 20%, #5c3a4f 100%);
   color: #fff;
-  padding: 1.2em 0 0 0;
+  padding: 0.8em 0 0.5em 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   min-height: 10vh;
 }
@@ -149,6 +149,18 @@ footer {
   }
 }
 
+@media (max-width: 1020px) {
+  #normalCon nav a{
+    font-size: 14px;
+  }
+  #normalCon h1{
+    font-size: 30px;
+  }
+  .icon{
+    height: 35px;
+  }
+}
+
 .colbar {
   background-color: #947889;
   color: white;
@@ -173,4 +185,36 @@ main {
   
   text-align: center;
   color:#fff
+}
+.cart-icon{
+  position: relative;
+}
+.cart-count{
+position:absolute;
+right: -13px;
+background-color: red;
+border-radius:50%;
+width: 18px;
+height: 18px;
+text-align: center;
+font-size: 12px;
+color:white;
+}
+
+.cart-count-col{
+position:absolute;
+right: 13px;
+background-color: red;
+border-radius:50%;
+width:15px;
+height: 15px;
+text-align: center;
+font-size: 10px;
+color:white;
+
+}
+
+.about-session{
+  margin: 0 40px 0 40px;
+  text-align: left;
 }

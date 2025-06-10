@@ -17,6 +17,7 @@
   </head>
   <body>
     <!-- 導航列 -->
+
     <header class="sticky-top">
       <!-- collapse container -->
       <div class="container container-fluid" id="collapseCon">
@@ -27,9 +28,12 @@
           >
         </h1>
         <div>
-          <a href="cartPage.html"
-            ><img src="./img/shoppingCart.png" height="40"
-          /></a>
+          <a href="cartPage.html" class="cart-icon"
+            ><img src="./img/shoppingCart.png" height="40" /><span
+              class="cart-count-col"
+              >99</span
+            ></a
+          >
           <button
             class="navbar-toggler"
             type="button"
@@ -62,19 +66,17 @@
               <a href="login.html">登入</a> | <a href="register.html">註冊</a>
             </li>
             <li>
-              <a href="cartPage.html"
-                ><img
-                  src="./img/shoppingCart.png"
-                  height="50"
-                  onclick="window.location.href='cartPage.html'"
-                  style="cursor: pointer"
-                />
-              </a>
+              <a href="cartPage.html" class="cart-icon"
+                ><img src="./img/shoppingCart.png" height="50" /><span
+                  class="cart-count"
+                  id="cart-qty"
+                  >99</span
+                ></a
+              >
             </li>
           </ul>
         </nav>
       </div>
-
       <!-- 導航列extent -->
       <div class="collapse colbar" id="navbarToggleExternalContent">
         <ul>
@@ -94,27 +96,31 @@
 
     <main class="about_content">
       <div>
-        <h2><br />關於銀河電腦城</h2>
-        <p>
+        <h2><br />關於我們</h2>
+        <div
+          class="about-section"
+          style="text-align: left; margin: 0 10vw 0 10vw"
+        >
+          <p>
+            <br />
+            銀河電腦城 — 你專屬嘅電腦世界探索站！
+            喺呢度，科技同夢想完美結合，為你打造最齊全、最專業嘅電腦配件選購體驗。
+          </p>
+          <p>無論你係砌機新手，定係電競高手，銀河電腦城都係你嘅最佳拍檔。</p>
+          <p>
+            喺我哋嘅平台，你可以輕鬆揀選由Intel、AMD、NVIDIA等頂尖品牌打造嘅中央處理器、顯示卡、記憶體、儲存裝置等等，滿足你對性能同品質嘅苛刻要求。
+          </p>
+          <p>
+            我哋獨有嘅自選砌機報價系統，更係突破傳統購物模式嘅創新利器。用戶只需簡單幾個步驟，就可以自由組合心水零件，即時計算出精準總價，助你輕鬆打造理想電腦，唔使再為預算煩惱。
+          </p>
+          <p>
+            銀河電腦城唔單止係銷售平台，我哋仲致力提供貼心嘅售後服務同技術支援，確保每位顧客都享有最安心、最專業嘅購物旅程。
+          </p>
+          <p>
+            選擇銀河電腦城，係選擇信心同創新的保障。無論你追求高效運算，還是享受電競激情，銀河電腦城都會陪伴你開啟無限可能嘅科技冒險！
+          </p>
           <br />
-          銀河電腦城 — 你專屬嘅電腦世界探索站！
-          喺呢度，科技同夢想完美結合，為你打造最齊全、最專業嘅電腦配件選購體驗。
-        </p>
-        <p>無論你係砌機新手，定係電競高手，銀河電腦城都係你嘅最佳拍檔。</p>
-        <p>
-          喺我哋嘅平台，你可以輕鬆揀選由Intel、AMD、NVIDIA等頂尖品牌打造嘅中央處理器、顯示卡、記憶體、儲存裝置等等，滿足你對性能同品質嘅苛刻要求。
-        </p>
-        <p>
-          我哋獨有嘅自選砌機報價系統，更係突破傳統購物模式嘅創新利器。用戶只需簡單幾個步驟，就可以自由組合心水零件，即時計算出精準總價，助你輕鬆打造理想電腦，唔使再為預算煩惱。
-        </p>
-        <p>
-          銀河電腦城唔單止係銷售平台，我哋仲致力提供貼心嘅售後服務同技術支援，確保每位顧客都享有最安心、最專業嘅購物旅程。
-        </p>
-        <p>
-          選擇銀河電腦城，係選擇信心同創新的保障。無論你追求高效運算，還是享受電競激情，銀河電腦城都會陪伴你開啟無限可能嘅科技冒險！
-        </p>
-        <br>
-      
+        </div>
       </div>
     </main>
     <!-- 頁尾 -->
@@ -126,5 +132,6 @@
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
+    
   </body>
 </html>
