@@ -57,24 +57,17 @@
   },
   {
     "category": "顯示卡",
-    "name": "MSI 微星 GeForce GT 710 1G 顯示卡",
-    "description": "https://shop.pegasus.hk/products/205869/MSI-%E5%BE%AE%E6%98%9F-GeForce-GT-710-1G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
-    "price": 429,
-    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/c9c2d9bf-a9c1-4068-6f62-c399e7ac0700/1600w"
+    "name": "ASUS 華碩 PRIME GeForce RTX 4070 12G GDDR6X OC 顯示卡",
+    "description": "NVIDIA CUDA® 核心:5888\n加速時脈 (MHz):2480\n基礎時脈 (MHz):1920\n記憶體規格:12 GB GDDR6",
+    "price": 4450,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/ba953d93-9b41-4c71-fd5e-4aeef1fdef00/1600w"
   },
   {
     "category": "顯示卡",
-    "name": "ASUS 華碩 GeForce GT 730 2G 顯示卡",
-    "description": "https://shop.pegasus.hk/products/209332/ASUS-%E8%8F%AF%E7%A2%A9-GeForce-GT-730-2G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
-    "price": 899,
-    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/776f0823-5ff6-4a18-5bf3-bb23f60f0300/1600w"
-  },
-  {
-    "category": "顯示卡",
-    "name": "ASUS 華碩 PHOENIX EVO Radeon RX 550 4G 顯示卡",
-    "description": "https://shop.pegasus.hk/products/209678/ASUS-%E8%8F%AF%E7%A2%A9-PHOENIX-EVO-Radeon-RX-550-4G-%E9%A1%AF%E7%A4%BA%E5%8D%A1",
-    "price": 930,
-    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/70626605-1cc1-4a87-3b75-7def33a39100/1600w"
+    "name": "GIGABYTE 技嘉 WINDFORCE SFF GeForce RTX 5080 16G OC 顯示卡",
+    "description": "NVIDIA CUDA® 核心:10752\n加速時脈 (MHz):2620\n基礎時脈 (MHz):2300\n記憶體規格:16 GB GDDR7",
+    "price": 11299,
+    "imgUrl": "https://pegasus.hk/cdn-cgi/imagedelivery/gTpMHUmncPYPe7GoYL67Ag/5c6c68ff-cb89-4343-eb15-a97368ea2f00/1600w"
   },
   {
     "category": "儲存裝置",
