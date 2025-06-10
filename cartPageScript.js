@@ -16,6 +16,7 @@ function updateCartPanel() {
         <button onclick='minusProductQuantity(${JSON.stringify(data)})'>-</button>
         <span>${data.quantity}</span>
         <button onclick='plusProductQuantity(${JSON.stringify(data)})'>+</button>
+        <img onclick='clearProductQuantity(${JSON.stringify(data)})' src="./img/trash.svg" style="width: 20px line-height: 1; cursor: pointer;">
        </div>`;
         cartPanel.appendChild(newDiv);
     });
@@ -34,5 +35,11 @@ function minusProductQuantity(product) {
 function plusProductQuantity(product) {
     let indexInCartProductList = cartProductList.findIndex((value) => value.name === product.name);//查找在陣列中的操作目標產品物件的序號
     cartProductList[indexInCartProductList].quantity++; //物件數量加1
+    updateCartPanel();//更新購物車數量
+}
+function clearProductQuantity(product){
+    console.log("dd");
+    let indexInCartProductList = cartProductList.findIndex((value) => value.name === product.name);
+    cartProductList.splice(indexInCartProductList, 1);//從陣列中刪除該物件
     updateCartPanel();//更新購物車數量
 }
