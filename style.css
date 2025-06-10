@@ -7,7 +7,7 @@ body {
 header {
   background: linear-gradient(90deg, #03090d 20%, #5c3a4f 100%);
   color: #fff;
-  padding: 1.2em 0;
+  padding: 1.2em 0 0 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   min-height: 10vh;
 }
@@ -121,7 +121,7 @@ footer {
   ); /* 響應式字體大小：
                                         最小12px，最大18px，中間隨視窗寬度變化 */
   letter-spacing: 1px; /* 字距 */
-  margin-top: 2em;
+
 }
 
 .icon {
@@ -138,9 +138,10 @@ footer {
 }
 
 @media (min-width: 800px) {
-  #collapseCon {
+  #collapseCon ,.colbar{
     display: none;
   }
+  
 }
 
 @media (max-width: 800px) {
@@ -158,6 +159,10 @@ footer {
   text-decoration: none;
 }
 
+.colbar ul{
+  margin-bottom: 0;
+}
+
 main {
   min-height: 85vh;
 }
@@ -166,10 +171,7 @@ main {
   background-image: url("./img/starryStar.gif");
   background-size: cover;
   opacity: 0.8; /* 設置透明度，範圍 0 (完全透明) 到 1 (完全不透明) */
-  width: 100vw; /* 設置寬度為視窗的 100% */
-  height: 100vh; /* 設置高度為視窗的 100% */
-  position: relative; /* 確保定位上下文 */
-  object-fit: contain;
+  
   text-align: center;
   color:#fff
 }
