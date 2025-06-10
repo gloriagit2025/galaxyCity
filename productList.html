@@ -66,7 +66,7 @@
             <li>
               <a href="cartPage.html" class="cart-icon"
                 ><img src="./img/shoppingCart.png" height="50"
-              /><span class="cart-count">99</span></a>
+              /><span class="cart-count"></span></a>
             </li>
           </ul>
         </nav>
@@ -121,6 +121,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="productListScript.js"></script>
+    <script>document.querySelector(".cart-count").textContent=JSON.parse(localStorage.getItem("cartProductList")).length</script>
     <link rel="stylesheet" href="style.css" />
   </head>
 </html>

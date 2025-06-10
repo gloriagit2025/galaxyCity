@@ -3,7 +3,14 @@ let categoryList = document.querySelectorAll("#categoryList li"); //獲取所有
 let showCategory = "全部商品"; //默認顯示分類為全部商品
 let productPanel = document.getElementById("productPanel"); //獲得產品介面元素
 updateCartPanel();
-function updateCartPanel() {
+function updateCartPanel() {//更新購物車介面
+  localStorage.setItem("cartProductList", JSON.stringify(cartProductList)); //將購物車列表存入localStorage
+  let cartQuantity = 0; //重置購物車數量計數器
+  //遍歷每個購物車產品
+  cartProductList.forEach((data) => {
+    cartQuantity += data.quantity; //累加總數量
+  });
+  document.querySelector(".cart-count").textContent = cartQuantity; //更新購物車數量顯示
   fetch("database.json") //請求讀取該檔案
     .then((response) => response.json()) //獲取的檔案轉為json物件
     .then((productData) => {
@@ -25,7 +32,8 @@ function updateCartPanel() {
           productPanel.appendChild(newDiv);
         }
       });
-    });
+    }
+    );
 }
 function addToCart(product) {//加入購物車
   //查找產品名字在購物車的序列
@@ -45,7 +53,7 @@ function addToCart(product) {//加入購物車
   else {
     cartProductList[indexInCartProductList].quantity++;//購物車列表內已有產品名字的數量增加
   }
-  localStorage.setItem("cartProductList", JSON.stringify(cartProductList)); //將購物車列表存入localStorage
+  updateCartPanel(); //更新購物車介面
 }
 //為分類列表每個分類按鈕添加點擊事件
 categoryList.forEach((category) => {
@@ -56,6 +64,6 @@ categoryList.forEach((category) => {
     });
     category.classList.add("active"); //使點擊的分類按鈕高亮active類別
     showCategory = category.textContent; //現時分類為該分類按鈕文字內容
-    updateCartPanel(); //更新產品介面
+    updateCartPanel(); //更新購物車介面
   })
 });

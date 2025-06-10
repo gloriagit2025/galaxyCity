@@ -1,8 +1,14 @@
 let cartProductList = JSON.parse(localStorage.getItem("cartProductList"));//從localStorage讀取購物車列表
+let cartPanel = document.getElementById("cartPanel"); //獲得產品介面元素
 updateCartPanel();
 function updateCartPanel() {
-    let cartPanel = document.getElementById("cartPanel"); //獲得產品介面元素
     localStorage.setItem("cartProductList", JSON.stringify(cartProductList)); //將購物車列表存入localStorage
+    let cartQuantity = 0; //重置購物車數量計數器
+    //遍歷每個購物車產品
+    cartProductList.forEach((data) => {
+        cartQuantity += data.quantity; //累加總數量
+    });
+    document.querySelector(".cart-count").textContent = cartQuantity; //更新購物車數量顯示
     cartPanel.innerHTML = ""; //重置產品介面元素為空
     //遍歷每個購物車產品
     cartProductList.forEach((data) => {
@@ -37,8 +43,7 @@ function plusProductQuantity(product) {
     cartProductList[indexInCartProductList].quantity++; //物件數量加1
     updateCartPanel();//更新購物車數量
 }
-function clearProductQuantity(product){
-    console.log("dd");
+function clearProductQuantity(product) {
     let indexInCartProductList = cartProductList.findIndex((value) => value.name === product.name);
     cartProductList.splice(indexInCartProductList, 1);//從陣列中刪除該物件
     updateCartPanel();//更新購物車數量
