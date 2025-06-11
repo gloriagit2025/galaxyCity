@@ -8,7 +8,8 @@ function updateCartPanel() {
     cartProductList.forEach((data) => {
         cartQuantity += data.quantity; //累加總數量
     });
-    document.querySelector(".cart-count").textContent = cartQuantity; //更新購物車數量顯示
+    localStorage.setItem("cartQuantity", cartQuantity)//將購物車數量存入localStorage
+    document.querySelector(".cart-count").textContent = localStorage.getItem("cartQuantity"); //更新購物車數量顯示
     cartPanel.innerHTML = ""; //重置產品介面元素為空
     //遍歷每個購物車產品
     cartProductList.forEach((data) => {
