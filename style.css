@@ -182,7 +182,7 @@ main {
   background-image: url("./img/starryStar.gif");
   background-size: cover;
   opacity: 0.8; /* 設置透明度，範圍 0 (完全透明) 到 1 (完全不透明) */
-  font-size: 2.5vh;
+  font-size: 20px;
   text-align: center;
   color:#fff
 }
@@ -215,6 +215,5 @@ color:white;
 }
 
 .about-session{
-  margin: 0 40px 0 40px;
   text-align: left;
 }
