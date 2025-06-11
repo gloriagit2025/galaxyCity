@@ -11,6 +11,7 @@ header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   min-height: 10vh;
 }
+
 header .container {
   width: 90%;
   margin: 0 auto;
@@ -26,21 +27,21 @@ nav ul {
   padding: 0;
   margin: 0;
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
 }
+
 nav a:hover {
   color: #b39ddb;
 }
 
 .main-flex {
   display: flex;
-  width: 95%;
   margin: 2em auto;
-  max-width: 1300px;
 }
 
 .sidebar {
@@ -50,11 +51,13 @@ nav a:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   margin-right: 2em;
 }
+
 .sidebar ul {
   list-style: none;
   margin: 0;
   padding: 1.5em 0 1.5em 0.5em;
 }
+
 .sidebar li {
   padding: 1em 1em;
   font-size: 1.1em;
@@ -64,38 +67,49 @@ nav a:hover {
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
+
 .sidebar li.active,
 .sidebar li:hover {
   background: #5c5e70;
   color: #fff;
 }
 
-.catalog-content {
-  flex: 1 1 auto;
-  background: #fff;
-  border-radius: 0 12px 12px 0;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-  padding: 2em 2em 2em 2em;
-  min-height: 520px;
+.confirmTips {
+  display: none;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); 
 }
-
+.confirmTips-content {
+  background-color: rgb(255,255,255);
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 10px;
+}
 .category-panel {
   display: none;
 }
+
 .category-panel[style*="block"],
 .category-panel:target {
   display: block;
 }
+
 .component-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1.5em;
   margin-top: 1.2em;
 }
+
 .component-grid h3 {
   margin: 0 0 0.4em 0;
   color: #363d50;
 }
+
 .component-grid p {
   margin: 0;
   color: #585e6b;
@@ -104,28 +118,38 @@ nav a:hover {
 
 footer {
   min-height: 5vh;
-  bottom: 0; /* 距離視窗底部 0 */
-  left: 0; /* 距離左邊 0 */
-  width: 100%; /* 滿寬 */
-  background: #03090d; /* 深色背景 */
-  color: #fff; /* 白字 */
-  text-align: center; /* 文字置中 */
-  padding: 0.8em 0; /* 上下間距 */
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3); /* 上面投影，提升層次 */
-  z-index: 1000; /* 確保浮喺最上層 */
-  font-size: clamp(
-    12px,
-    1.5vw,
-    18px
-  ); /* 響應式字體大小：
+  bottom: 0;
+  /* 距離視窗底部 0 */
+  left: 0;
+  /* 距離左邊 0 */
+  width: 100%;
+  /* 滿寬 */
+  background: #03090d;
+  /* 深色背景 */
+  color: #fff;
+  /* 白字 */
+  text-align: center;
+  /* 文字置中 */
+  padding: 0.8em 0;
+  /* 上下間距 */
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+  /* 上面投影，提升層次 */
+  z-index: 1000;
+  /* 確保浮喺最上層 */
+  font-size: clamp(12px,
+      1.5vw,
+      18px);
+  /* 響應式字體大小：
                                         最小12px，最大18px，中間隨視窗寬度變化 */
-  letter-spacing: 1px; /* 字距 */
+  letter-spacing: 1px;
+  /* 字距 */
 
 }
 
 .icon {
   height: 50px;
 }
+
 .nav_h1 {
   display: flex;
   font-size: 3em;
@@ -137,10 +161,12 @@ footer {
 }
 
 @media (min-width: 800px) {
-  #collapseCon ,.colbar{
+
+  #collapseCon,
+  .colbar {
     display: none;
   }
-  
+
 }
 
 @media (max-width: 800px) {
@@ -150,13 +176,15 @@ footer {
 }
 
 @media (max-width: 1020px) {
-  #normalCon nav a{
+  #normalCon nav a {
     font-size: 14px;
   }
-  #normalCon h1{
+
+  #normalCon h1 {
     font-size: 30px;
   }
-  .icon{
+
+  .icon {
     height: 35px;
   }
 }
@@ -165,12 +193,13 @@ footer {
   background-color: #947889;
   color: white;
 }
+
 .colbar ul li a {
   color: white;
   text-decoration: none;
 }
 
-.colbar ul{
+.colbar ul {
   margin-bottom: 0;
 }
 
@@ -181,40 +210,43 @@ main {
 .about_content {
   background-image: url("./img/starryStar.gif");
   background-size: cover;
-  opacity: 0.8; /* 設置透明度，範圍 0 (完全透明) 到 1 (完全不透明) */
+  opacity: 0.8;
+  /* 設置透明度，範圍 0 (完全透明) 到 1 (完全不透明) */
   font-size: 2.5vh;
   text-align: center;
-  color:#fff
+  color: #fff
 }
-.cart-icon{
+
+.cart-icon {
   position: relative;
 }
-.cart-count{
-position:absolute;
-right: -13px;
-background-color: red;
-border-radius:50%;
-width: 18px;
-height: 18px;
-text-align: center;
-font-size: 12px;
-color:white;
+
+.cart-count {
+  position: absolute;
+  right: -13px;
+  background-color: red;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
 }
 
-.cart-count-col{
-position:absolute;
-right: 13px;
-background-color: red;
-border-radius:50%;
-width:15px;
-height: 15px;
-text-align: center;
-font-size: 10px;
-color:white;
+.cart-count-col {
+  position: absolute;
+  right: 13px;
+  background-color: red;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  font-size: 10px;
+  color: white;
 
 }
 
-.about-session{
+.about-session {
   margin: 0 40px 0 40px;
   text-align: left;
 }

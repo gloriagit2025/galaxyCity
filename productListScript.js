@@ -2,6 +2,8 @@ let cartProductList = JSON.parse(localStorage.getItem("cartProductList"));//從l
 let categoryList = document.querySelectorAll("#categoryList li"); //獲取所有分類按鈕
 let showCategory = "全部商品"; //默認顯示分類為全部商品
 let productPanel = document.getElementById("productPanel"); //獲得產品介面元素
+let confirmTips = document.querySelector(".confirmTips"); //獲得購物車確認提示框
+let confirmButton = document.getElementById("closeConfirmBtn"); //獲得確認按鈕
 updateCartPanel();
 function updateCartPanel() {//更新購物車介面
   localStorage.setItem("cartProductList", JSON.stringify(cartProductList)); //將購物車列表存入localStorage
@@ -54,6 +56,7 @@ function addToCart(product) {//加入購物車
     cartProductList[indexInCartProductList].quantity++;//購物車列表內已有產品名字的數量增加
   }
   updateCartPanel(); //更新購物車介面
+  confirmTips.style.display = "block"; //顯示購物車確認提示框
 }
 //為分類列表每個分類按鈕添加點擊事件
 categoryList.forEach((category) => {
@@ -67,3 +70,7 @@ categoryList.forEach((category) => {
     updateCartPanel(); //更新購物車介面
   })
 });
+//為購物車關閉按鈕添加點擊隱藏提示框事件
+confirmButton.addEventListener("click", () => {
+  confirmTips.style.display = "none"; //隱藏購物車確認提示框
+})
