@@ -21,6 +21,17 @@
         align-content: center;
         justify-content: center;
       }
+
+       .row {
+          display: flex;
+          justify-content: center; /* 將卡片置中 */
+          flex-wrap: wrap; /* 允許換行 */
+          margin: 20px; /* 增加外邊距 */
+      }
+      .card {
+          margin: 10px; /* 卡片之間的間距 */
+          width: 18rem;
+      }
     </style>
   </head>
   <body>
@@ -109,15 +120,15 @@
           style="background-color: rgb(180, 203, 203)"
         >
           <div class="carousel-item active text-car">
-            <p class="d-block w-100 text-center">
+            <p class="d-block w-100 text-center" style="color:blue">
               ~~ 每月優惠 多款電腦零件產品 限定熱賣 立即搜購 ~~
             </p>
           </div>
           <div class="carousel-item text-car">
-            <p class="d-block w-100 text-center">高性能電腦產品</p>
+            <p class="d-block w-100 text-center"style="color:blue">~~ 高性能電腦產品 ~~</p>
           </div>
           <div class="carousel-item text-car">
-            <p class="d-block w-100 text-center">最新電腦配件</p>
+            <p class="d-block w-100 text-center"style="color:blue">~~ 最新各種電腦配件 ~~</p>
           </div>
         </div>
         <button
@@ -149,7 +160,7 @@
             <img src="./img/cpu.jpg" class="d-block w-100" alt="..." />
           </div>
           <div class="carousel-item">
-            <img src="./img/dc.png" class="d-block w-100" alt="..." />
+            <img src="./img/dd.jpg" class="d-block w-100" alt="..." />
           </div>
           <div class="carousel-item">
             <img src="./img/index_aipc.jpeg" class="d-block w-100" alt="..." />
@@ -174,6 +185,58 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+       <div class="row">
+
+    <div class="card">
+      <img class="card-img-top" src=".." alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title"> GAMING GeForce RTX 5070 顯示卡 <span style="font-size: 14px;color:rgb(17, 14, 14);background: rgb(10, 212, 26);
+        ">可預訂
+        </span> </h5>
+        <p class="card-text">
+          最新產品 旗艦級散熱系統 有現貨
+        </p>
+        <a href="#" class="btn btn-primary">立即選購</a> 
+        
+   
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img-top" src=".." alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title"> GAMING GeForce RTX 5070 顯示卡 
+          <span style="font-size: 14px;color:white;background: red;position: relative;">
+          熱賣中  
+          <img src="./img/hot.png" style="position:absolute ;right:-110px;bottom: -30px;height:100px"></h5>
+          </span>
+          <p class="card-text">
+            最新產品 旗艦級散熱系統 有現貨
+          </p>
+          <a href="#" class="btn btn-primary">立即選購</a> 
+          
+         
+   
+          
+        </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src=".." alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title"> GAMING GeForce RTX 5070 顯示卡 <span style="font-size: 14px;color:white;background: orange;">
+              ***有折扣
+            </span></h5>
+            <p class="card-text">
+              最新產品 旗艦級散熱系統 有現貨
+            </p>
+            <a href="#" class="btn btn-primary">立即選購</a>  
+           
+            
+          </div>
+
+        </div>
+    </div>
     </main>
 
     <!-- 頁尾 (Retained) -->
