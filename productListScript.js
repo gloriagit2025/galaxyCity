@@ -8,44 +8,44 @@ let showCategory = "全部商品"; //默認顯示分類為全部商品
 let productPanel = document.getElementById("productPanel"); //獲得產品介面元素
 let confirmTips = document.querySelector(".confirmTips"); //獲得購物車確認提示框
 let confirmButton = document.getElementById("closeConfirmBtn"); //獲得確認按鈕
-updateCartPanel();
+let productDataList;//產品資料庫列表
+fetch("database.json") //請求讀取該檔案
+  .then((response) => response.json()) //獲取的檔案轉為json物件
+  .then((data) => {
+    productDataList = data; //獲得產品資料庫參數
+    updateCartPanel(); //更新購物車介面
+  });
+//更新購物車介面
 function updateCartPanel() {
-  //更新購物車介面
-  localStorage.setItem("cartProductList", JSON.stringify(cartProductList)); //將購物車列表存入localStorage
   let cartQuantity = 0; //重置購物車數量計數器
   //遍歷每個購物車產品
   cartProductList.forEach((data) => {
     cartQuantity += data.quantity; //累加總數量
   });
+  localStorage.setItem("cartProductList", JSON.stringify(cartProductList)); //將購物車列表存入localStorage
   localStorage.setItem("cartQuantity", cartQuantity); //將購物車數量存入localStorage
-  document.querySelector(".cart-count").textContent = localStorage.getItem("cartQuantity"); //更新標準購物車數量顯示
-  document.querySelector(".cart-count-col").textContent = localStorage.getItem("cartQuantity"); //更新手機版購物車數量顯示
-  fetch("database.json") //請求讀取該檔案
-    .then((response) => response.json()) //獲取的檔案轉為json物件
-    .then((productData) => {
-      //獲得產品資料庫參數
-      productPanel.innerHTML = ""; //重置產品介面元素為空
-      //遍歷每個產品
-      productData.forEach((data) => {
-        //如果現時顯示分類為全部商品或產品分類為現時顯示分類
-        if (showCategory === "全部商品" || data.category === showCategory) {
-          let newDiv = document.createElement("div"); //創建div元素
-          newDiv.classList.add("row"); //屬性添加bootstrap row
-          newDiv.innerHTML = `<img class="col-3" src="${data.imgUrl}" alt="${
-            data.name
-          }">
+  document.querySelector(".cart-count").textContent = cartQuantity; //更新標準購物車數量顯示
+  document.querySelector(".cart-count-col").textContent = cartQuantity; //更新手機版購物車數量顯示
+  productPanel.innerHTML = ""; //重置產品介面元素為空
+  //遍歷每個產品
+  productDataList.forEach((data) => {
+    //如果現時顯示分類為全部商品或產品分類為現時顯示分類
+    if (showCategory === "全部商品" || data.category === showCategory) {
+      let newDiv = document.createElement("div"); //創建div元素
+      newDiv.classList.add("row"); //屬性添加bootstrap row
+      newDiv.innerHTML = `<img class="col-3" src="${data.imgUrl}" alt="${data.name
+        }">
        <div class="col-3">
         <div>${data.name}</div>
         <div>HK$${data.price}</div>
         <button onclick='addToCart(${JSON.stringify(data)})'>加入購物車</button>
        </div>`;
-          productPanel.appendChild(newDiv);
-        }
-      });
-    });
-}
+      productPanel.appendChild(newDiv);
+    }
+  });
+};
+//加入購物車
 function addToCart(product) {
-  //加入購物車
   //查找產品名字在購物車的序列
   let indexInCartProductList = cartProductList.findIndex(
     (value) => value.name === product.name

@@ -28,6 +28,12 @@ function updateCartPanel() {
        </div>`;
         cartPanel.appendChild(newDiv);
     });
+    if(cartProductList.length === 0) {//如果購物車內沒有產品
+        document.querySelector(".cartTips").style.display = "flex";
+    }
+    else {
+        document.querySelector(".cartTips").style.display = "none";
+    }
 }
 function minusProductQuantity(product) {
     let indexInCartProductList = cartProductList.findIndex((value) => value.name === product.name);//查找在陣列中的操作目標產品物件的序號

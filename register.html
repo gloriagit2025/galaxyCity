@@ -285,8 +285,10 @@
       crossorigin="anonymous"
     ></script>
     <script>
+    if (localStorage.getItem("cartQuantity")) {
       document.querySelector(".cart-count").textContent = localStorage.getItem("cartQuantity"); //更新購物車數量顯示
       document.querySelector(".cart-count-col").textContent = localStorage.getItem("cartQuantity"); //更新手機版購物車數量顯示
-    </script>
+    }
+  </script>
   </body>
 </html>
