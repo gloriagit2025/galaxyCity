@@ -18,8 +18,8 @@ function updateCartPanel() {
     cartQuantity += data.quantity; //累加總數量
   });
   localStorage.setItem("cartQuantity", cartQuantity); //將購物車數量存入localStorage
-  document.querySelector(".cart-count").textContent =
-    localStorage.getItem("cartQuantity"); //更新購物車數量顯示
+  document.querySelector(".cart-count").textContent = localStorage.getItem("cartQuantity"); //更新標準購物車數量顯示
+  document.querySelector(".cart-count-col").textContent = localStorage.getItem("cartQuantity"); //更新手機版購物車數量顯示
   fetch("database.json") //請求讀取該檔案
     .then((response) => response.json()) //獲取的檔案轉為json物件
     .then((productData) => {

@@ -31,7 +31,7 @@
           <a href="cartPage.html" class="cart-icon"
             ><img src="./img/shoppingCart.png" height="40" /><span
               class="cart-count-col"
-              >99</span
+              >0</span
             ></a
           >
           <button
@@ -70,9 +70,8 @@
                 ><img src="./img/shoppingCart.png" height="50" /><span
                   class="cart-count"
                   id="cart-qty"
-                  >99</span
-                ></a
-              >
+                ></span
+              ></a>
             </li>
           </ul>
         </nav>
@@ -132,6 +131,9 @@
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
-    <script>document.querySelector(".cart-count").textContent = localStorage.getItem("cartQuantity");//更新購物車數量顯示</script>
+    <script>
+      document.querySelector(".cart-count").textContent = localStorage.getItem("cartQuantity"); //更新購物車數量顯示
+      document.querySelector(".cart-count-col").textContent = localStorage.getItem("cartQuantity"); //更新手機版購物車數量顯示
+    </script>
   </body>
 </html>
