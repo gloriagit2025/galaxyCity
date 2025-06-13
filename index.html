@@ -30,13 +30,18 @@
       }
 
       .card {
-        margin: 10px;
-        width: 18rem;
+        margin: 1%;
+        width: 31%;
       }
 
-      .bg-col {
-        background-color: rgb(55, 55, 65);
+      .index-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
       }
+
     </style>
   </head>
 
@@ -117,85 +122,111 @@
       <!-- 導航列end extent -->
     </header>
     <!-- 導航列end -->
-    <main>
-      <div class="bg-col">
-        <!-- 輪播 文字-->
+    <main style="background-color:rgb(55, 55, 65) ;">
+      <!-- 輪播 文字-->
+      <div
+        id="carouselExampleFade_text"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
         <div
-          id="carouselExampleFade_text"
-          class="carousel slide carousel-fade"
-          data-bs-ride="carousel"
+          class="carousel-inner"
+          style="background-color: rgb(180, 203, 203)"
         >
-          <div
-            class="carousel-inner"
-            style="background-color: rgb(180, 203, 203)"
-          >
-            <div class="carousel-item active text-car">
-              <p class="d-block w-100 text-center" style="color: blue">
-                ~~ 每月優惠 多款電腦零件產品 限定熱賣 立即搜購 ~~
-              </p>
-            </div>
-            <div class="carousel-item text-car">
-              <p class="d-block w-100 text-center" style="color: blue">
-                ~~ 高性能電腦產品 ~~
-              </p>
-            </div>
-            <div class="carousel-item text-car">
-              <p class="d-block w-100 text-center" style="color: blue">
-                ~~ 最新各種電腦配件 ~~
-              </p>
-            </div>
+          <div class="carousel-item active text-car">
+            <p class="d-block w-100 text-center" style="color: blue">
+              ~~ 每月優惠 多款電腦零件產品 限定熱賣 立即搜購 ~~
+            </p>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleFade_text"
-            data-bs-slide="prev"
-          >
-            <!-- <span style="color: black;"><</span> -->
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleFade_text"
-            data-bs-slide="next"
-          >
-            <!-- <span  style="color:black;">></span> -->
-          </button>
+          <div class="carousel-item text-car">
+            <p class="d-block w-100 text-center" style="color: blue">
+              ~~ 高性能電腦產品 ~~
+            </p>
+          </div>
+          <div class="carousel-item text-car">
+            <p class="d-block w-100 text-center" style="color: blue">
+              ~~ 最新各種電腦配件 ~~
+            </p>
+          </div>
         </div>
-
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade_text"
+          data-bs-slide="prev"
+        >
+          <!-- <span style="color: black;"><</span> -->
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade_text"
+          data-bs-slide="next"
+        >
+          <!-- <span  style="color:black;">></span> -->
+        </button>
+      </div>
+      <div class="index-container">
         <!-- 輪播 相片-->
         <div
           id="carouselExampleFade"
           class="carousel slide carousel-fade"
           data-bs-ride="carousel"
-          style="padding-top: 10px"
+          style="padding-top: 10px; width: 75%;"
         >
           <div class="carousel-inner">
-            <div class="carousel-item active d-flex justify-content-center">
-              <img src="./img/cpu.jpg" class="d-block w-50" alt="CPU Image" />
+            <div
+              class="carousel-item active d-flex justify-content-center"
+              data-bs-interval="3000"
+            >
+              <img src="./img/cpu.jpg" class="d-block w-100" alt="CPU Image" />
             </div>
-            <div class="carousel-item d-flex justify-content-center">
+            <div
+              class="carousel-item d-flex justify-content-center"
+              data-bs-interval="3000"
+            >
               <img
                 src="./img/cooling_fan.webp"
-                class="d-block w-50"
+                class="d-block w-100"
                 alt="motherboards"
               />
             </div>
-            <div class="carousel-item d-flex justify-content-center">
+            <div
+              class="carousel-item d-flex justify-content-center"
+              data-bs-interval="3000"
+            >
               <img
                 src="./img/index_aipc.jpeg"
-                class="d-block w-50"
+                class="d-block w-100"
                 alt="AI PC Image"
               />
             </div>
           </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
 
-        <div class="row" style="margin: 0px">
+        <div class="row" style="margin: 0px;width: 75%;">
           <div class="card">
             <img class="card-img-top" src=".." alt="Card image cap" />
             <div class="card-body">
-              <h5 class="card-title">
+              <h5 class="card-title" >
                 GAMING GeForce RTX 5070 顯示卡
                 <span
                   style="
