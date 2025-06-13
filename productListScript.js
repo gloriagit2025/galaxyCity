@@ -38,6 +38,7 @@ function updateCartPanel() {
        <div class="col-3">
         <div>${data.name}</div>
         <div>HK$${data.price}</div>
+        <a href="productDetail.html" onclick='setCurrentProduct(${JSON.stringify(data)})'>產品詳情</a>
         <button onclick='addToCart(${JSON.stringify(data)})'>加入購物車</button>
        </div>`;
       productPanel.appendChild(newDiv);
@@ -81,3 +82,7 @@ categoryList.forEach((category) => {
 confirmButton.addEventListener("click", () => {
   confirmTips.style.display = "none"; //隱藏購物車確認提示框
 });
+//設置現時查詢的產品
+function setCurrentProduct(product) {
+  localStorage.setItem("currentProduct",JSON.stringify(product));
+}
