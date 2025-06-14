@@ -15,6 +15,11 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     />
+  
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <style>
       .text-car {
         display: flex;
@@ -34,14 +39,39 @@
         width: 31%;
       }
 
-      .index-container{
+      .index-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
         flex-wrap: wrap;
       }
-
+      .product-img {
+        margin: 0 5px;
+        display: flex;
+        justify-content: center;
+        height: 150px;
+      }
+      .anima {
+        animation: changeColor 1s infinite;
+      }
+      @keyframes changeColor {
+        0% {
+          color: red;
+        }
+        25% {
+          color: orange;
+        }
+        50% {
+          color: yellow;
+        }
+        75% {
+          color: green;
+        }
+        100% {
+          color: purple;
+        }
+      }
     </style>
   </head>
 
@@ -122,7 +152,7 @@
       <!-- 導航列end extent -->
     </header>
     <!-- 導航列end -->
-    <main style="background-color:rgb(55, 55, 65) ;">
+    <main style="background-color: rgb(55, 55, 65)">
       <!-- 輪播 文字-->
       <div
         id="carouselExampleFade_text"
@@ -130,41 +160,26 @@
         data-bs-ride="carousel"
       >
         <div
-          class="carousel-inner"
+          class="carousel-inner "
           style="background-color: rgb(180, 203, 203)"
         >
           <div class="carousel-item active text-car">
-            <p class="d-block w-100 text-center" style="color: blue">
+            <p class="d-block w-100 text-center anima" style="color: blue">
               ~~ 每月優惠 多款電腦零件產品 限定熱賣 立即搜購 ~~
             </p>
           </div>
-          <div class="carousel-item text-car">
-            <p class="d-block w-100 text-center" style="color: blue">
+          <div class="carousel-item text-car ">
+            <p class="d-block w-100 text-center anima" style="color: blue">
               ~~ 高性能電腦產品 ~~
             </p>
           </div>
-          <div class="carousel-item text-car">
-            <p class="d-block w-100 text-center" style="color: blue">
+          <div class="carousel-item text-car ">
+            <p class="d-block w-100 text-center anima" style="color: blue">
               ~~ 最新各種電腦配件 ~~
             </p>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleFade_text"
-          data-bs-slide="prev"
-        >
-          <!-- <span style="color: black;"><</span> -->
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleFade_text"
-          data-bs-slide="next"
-        >
-          <!-- <span  style="color:black;">></span> -->
-        </button>
+       
       </div>
       <div class="index-container">
         <!-- 輪播 相片-->
@@ -172,7 +187,7 @@
           id="carouselExampleFade"
           class="carousel slide carousel-fade"
           data-bs-ride="carousel"
-          style="padding-top: 10px; width: 75%;"
+          style="padding-top: 10px; width: 75%"
         >
           <div class="carousel-inner">
             <div
@@ -222,30 +237,37 @@
           </button>
         </div>
 
-        <div class="row" style="margin: 0px;width: 75%;">
+        <div class="row" style="margin: 0px; width: 75%">
           <div class="card">
-            <img class="card-img-top" src=".." alt="Card image cap" />
+            <div class="product-img">
+              <img class="card-img-top" src=".." alt="Card image cap" />
+            </div>
             <div class="card-body">
-              <h5 class="card-title" >
+              <h5 class="card-title overflow-auto" style="height: 50px">
                 GAMING GeForce RTX 5070 顯示卡
-                <span
-                  style="
-                    font-size: 14px;
-                    color: rgb(17, 14, 14);
-                    background: rgb(10, 212, 26);
-                  "
-                  >可預訂
-                </span>
               </h5>
-              <p class="card-text">最新產品 旗艦級散熱系統 有現貨</p>
+              <span
+                style="
+                  font-size: 14px;
+                  color: rgb(17, 14, 14);
+                  background: rgb(10, 212, 26);
+                "
+                >可預訂
+              </span>
+
+              <p class="card-text">最新產品</p>
               <a href="#" class="btn btn-primary">立即選購</a>
             </div>
           </div>
 
           <div class="card">
-            <img class="card-img-top" src=".." alt="Card image cap" />
+            <div class="product-img">
+              <img class="card-img-top" src=".." alt="Card image cap" />
+            </div>
             <div class="card-body">
-              <h5 class="card-title">GAMING GeForce RTX 5070 顯示卡</h5>
+              <h5 class="card-title overflow-auto" style="height: 50px">
+                GAMING GeForce RTX 5070 顯示卡
+              </h5>
               <span
                 style="
                   font-size: 14px;
@@ -271,14 +293,17 @@
           </div>
 
           <div class="card">
-            <img class="card-img-top" src=".." alt="Card image cap" />
+            <div class="product-img">
+              <img class="card-img-top" src=".." alt="Card image cap" />
+            </div>
             <div class="card-body">
-              <h5 class="card-title">
+              <h5 class="card-title overflow-auto" style="height: 50px">
                 GAMING GeForce RTX 5070 顯示卡
-                <span style="font-size: 14px; color: white; background: orange">
-                  ***有折扣
-                </span>
               </h5>
+              <span style="font-size: 14px; color: white; background: orange">
+                ***有折扣
+              </span>
+
               <p class="card-text">最新產品 旗艦級散熱系統 有現貨</p>
               <a href="#" class="btn btn-primary">立即選購</a>
             </div>
@@ -286,7 +311,41 @@
         </div>
       </div>
     </main>
+ <div class="container py-4">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="follow-us">
+            <img src="./img/gx.jpeg" style="width: 100%" />
+          </div>
+        </div>
 
+        <div class="col-sm-4">
+          <img src="./img/payment.webp" style="width: 100%" />
+        </div>
+
+        <div class="col-sm-4">
+          <p style="margin-bottom: 0px;">關注我們</p>
+          <a
+            href="https://www.facebook.com"
+            class="icon-button"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/"
+            class="icon-button"
+            target="_blank"
+          >
+            <i class="bi bi-instagram"></i
+          ></a>
+          <p style="margin-bottom: 0px;">私隱政策 | 使用條款</p>
+          <p style="margin-bottom: 0px;">應用程式</p>
+          <img src="./img/googleplay.svg" style="width: 45%;" />
+          <img src="./img/applestore.svg" style="width: 45%;"/>
+        </div>
+      </div>
+    </div>
     <!-- 頁尾 (Retained) -->
     <footer>
       <div class="container">© 2025 銀河電腦城．版權所有</div>
