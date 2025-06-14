@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-      crossorigin="anonymous"
-    />
-    <link
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-
-    <style>
+  <style>
       .delbox {
         border: 1px solid gray;
         text-align: center;
@@ -40,7 +38,7 @@
         gap: 2vw;
       }
       select {
-         width: 21vw;
+        width: 21vw;
         min-width: 182px;
         height: 29px;
       }
@@ -49,110 +47,222 @@
         min-width: 182px;
       }
     </style>
-  </head>
+  <title>銀河電腦城 | 購物車</title>
 
-  <body>
-    <form>
-    <div style="margin: 0 3vw;">
-      <div>cart details area</div>
+</head>
 
-      <h4 onclick="collapseDel()">
-        <strong>運送選項</strong><i class="bi bi-file-arrow-down-fill"></i>
-      </h4>
-      <div id="del-container" class="row" style="margin: 0vw;;gap: 1vw; display: none">
-        <div class="delbox" style="width: 30vw; padding: 1em 0em">
-          <h5><b>免費運送</b></h5>
-          <span>1-5個工作天</span><br />
-          <span>砌機: 3-5個工作天</span><br />
-          <span>HK$18</span>
-        </div>
-        <div class="delbox" style="width: 30vw; padding: 1em 0em">
-          <h5><b>特快運送</b></h5>
-          <span>即日 (現貨訂單, 2PM 截單)/1個工作天</span><br />
-          <span>HK$86</span>
-        </div>
-        <div class="delbox" style="width: 30vw; padding: 1em 0em">
-          <h5><b>門巿自取</b></h5>
-          <span>1-5個工作天</span><br />
-          <span>砌機: 3-5個工作天</span>
-        </div>
+<body>
+  <!-- 導航列 -->
+
+  <header class="sticky-top">
+    <!-- collapse container -->
+    <div class="container container-fluid" id="collapseCon">
+      <h1 class="nav_h1" style="font-size: 30px">
+        <img class="icon" src="./img/companyIcon.gif" alt="Company Icon" />
+        <a href="index.html" style="text-decoration: none; color: white">銀河電腦城</a>
+      </h1>
+      <div>
+        <a href="cartPage.html" class="cart-icon"><img src="./img/shoppingCart.png" height="40" /><span
+            class="cart-count-col">0</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa fa-bars"></span>
+        </button>
       </div>
-      <h4 onclick="collapseInfo()">
-        <strong>收貨人資料</strong><i class="bi bi-file-arrow-down-fill"></i>
-      </h4>
+    </div>
 
-      <div id="info-container" style="display: none">
-        <div class="info-container">
-          <div>
-            <label>收件人姓氏*</label><br />
-            <input /required>
+    <!-- normal container -->
+    <div class="container" id="normalCon">
+      <h1 class="nav_h1">
+        <img class="icon" src="./img/companyIcon.gif" alt="Company Icon" />
+        <a href="index.html" style="text-decoration: none; color: white">銀河電腦城</a>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">主頁</a></li>
+          <li><a href="productList.html">產品目錄</a></li>
+          <li><a href="builder.html">自選砌機報價</a></li>
+          <li><a href="about.html">關於我們</a></li>
+          <li>
+            <a href="login.html">登入</a> | <a href="register.html">註冊</a>
+          </li>
+          <li>
+            <a href="cartPage.html" class="cart-icon"><img src="./img/shoppingCart.png" height="50" /><span
+                class="cart-count">0</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- 導航列extent -->
+    <div class="collapse colbar" id="navbarToggleExternalContent">
+      <ul>
+        <li><a href="index.html">主頁</a></li>
+        <li><a href="productList.html">產品目錄</a></li>
+        <li><a href="builder.html">自選砌機報價</a></li>
+        <li><a href="about.html">關於我們</a></li>
+        <li>
+          <a href="login.html">登入</a> |
+          <a href="register.html">註冊</a>
+        </li>
+      </ul>
+    </div>
+    <!-- 導航列end extent -->
+  </header>
+  <!-- 導航列end -->
+  <main>
+    <div style="margin: 0 3vw">
+      <form id="payment-form">
+        <div>cart details area</div>
+
+        <h4 onclick="collapseDel()">
+          <strong>運送選項</strong><i class="bi bi-file-arrow-down-fill"></i>
+        </h4>
+        <div id="del-container" class="row" style="margin: 0vw; gap: 1vw">
+          <div class="delbox" style="width: 30vw; padding: 1em 0em">
+            <h5><b>免費運送</b></h5>
+            <span>1-5個工作天</span><br />
+            <span>砌機: 3-5個工作天</span><br />
+            <span>HK$18</span>
           </div>
-          <div>
-            <label>收件人名稱*</label><br />
-            <input />
+          <div class="delbox" style="width: 30vw; padding: 1em 0em">
+            <h5><b>特快運送</b></h5>
+            <span>即日 (現貨訂單, 2PM 截單)/1個工作天</span><br />
+            <span>HK$86</span>
           </div>
-          <div>
-            <label>電郵*</label><br />
-            <input />
+          <div class="delbox" style="width: 30vw; padding: 1em 0em">
+            <h5><b>門巿自取</b></h5>
+            <span>1-5個工作天</span><br />
+            <span>砌機: 3-5個工作天</span>
           </div>
-          <div>
-            <label>電話*</label><br />
-            <input />
-          </div>
-          <div>
-            <label>區域*</label><br />
-            <select>
-              <option>香港</option>
-              <option>九龍</option>
-              <option>新界</option>
-              <option>離島</option>
-            </select>
-          </div>
-          <div>
-            <label>公司/機構名稱</label><br />
-            <input />
-          </div>
-          <div>
-            <label>地址*</label><br />
-            <input />
-          </div>
-          <div>
-            <label>送貨時間 (將盡量安排)</label><br />
-            <select>
+        </div>
+        <h4 onclick="collapseInfo()">
+          <strong>收貨人資料</strong><i class="bi bi-file-arrow-down-fill"></i>
+        </h4>
+
+        <div id="info-container" style="display: none">
+          <div class="info-container">
+            <div>
+              <label>收件人姓氏*</label><br />
+              <input id="surname" />
+            </div>
+            <div>
+              <label>收件人名稱*</label><br />
+              <input id="givename" />
+            </div>
+            <div>
+              <label>電郵*</label><br />
+              <input id="email" />
+            </div>
+            <div>
+              <label>電話*</label><br />
+              <input id="tel" />
+            </div>
+            <div>
+              <label>區域</label><br />
+              <select>
+                <option>香港</option>
+                <option>九龍</option>
+                <option>新界</option>
+                <option>離島</option>
+              </select>
+            </div>
+            <div>
+              <label>公司/機構名稱</label><br />
+              <input />
+            </div>
+            <div>
+              <label>地址*</label><br />
+              <input id="address" />
+            </div>
+            <div>
+              <label>送貨時間 (將盡量安排)</label><br />
+              <select>
                 <option>11:00 AM -6:00 PM</option>
                 <option>6:00 PM -10:00 PM</option>
-                
-            </select>
+              </select>
+            </div>
+          </div>
+          <br />
+          <div>
+            <label>備註</label><br />
+            <textarea style="width: 98%"></textarea>
           </div>
         </div>
-    <br>
-        <div>
-          <label>備註</label><br />
-          <textarea style="width: 98%"></textarea>
+        <h4 onclick="collapsePay()">
+          <strong>付款資料</strong><i class="bi bi-file-arrow-down-fill"></i>
+        </h4>
+        <div id="pay-container" style="display: none">
+          <h3>信用卡</h3>
+
+          <label for="firstname">First name </label>
+          <input
+            id="firstname"
+            name="firstname"
+            pattern="[a-z A-Z]+"
+            maxlength="30"
+            required
+          />
+          <label for="lastname">Last name</label>
+          <input
+            id="lastname"
+            name="lastname"
+            pattern="[a-z A-Z]+"
+            maxlength="30"
+            required
+          />
+          <br />
+          <label for="ccnum">Credit card number</label>
+          <input
+            id="ccnum"
+            name="ccnum"
+            pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"
+            placeholder="xxxx-xxxx-xxxx-xxxx"
+            maxlength="19"
+            required
+          />
+
+          <br />
+          <label for="ccExp">Expiration date</label>
+          <input
+            id="ccExp"
+            name="ccExp"
+            pattern="(0[1-9]|1[012])/(2[4-9]|[345][0-9])"
+            placeholder="MM/YY"
+            maxlength="5"
+            required
+          />
+          <br />
+          <label for="cvc">Security code</label>
+          <input
+            id="cvc"
+            name="cvc"
+            pattern="[0-9]{3}"
+            placeholder="CVC"
+            maxlength="3"
+            required
+          />
+          <br />
         </div>
-      </div>
-      <h4 onclick="collapsePay()">
-        <strong>付款資料</strong><i class="bi bi-file-arrow-down-fill"></i>
-      </h4>
-      <div id="pay-container">
-        <input type="radio">
-        <label style="margin-right: 20px;">Alipay</label>
-         <input type="radio">
-        <label>Credit Card</label>
-      </div>
-      <div>
-        <button>上一步</button>
         <span
           >產品總額 : $<span>198</span> 附加費 : $<span>18</span> 總計 : $<span
             >216</span
           ></span
         >
-        <button>下一步</button>
-      </div>
+        <button type="submit" onclick="handlePayment()">提交</button>
+      </form>
     </div>
-    </form>
-    
-    <script>
+  </main>
+
+  <!-- 頁尾  -->
+  <footer>
+    <div class="container">© 2025 銀河電腦城．版權所有</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+   <script>
       const boxs = document.querySelectorAll(".delbox");
       boxs.forEach((box) => {
         box.addEventListener("click", () => {
@@ -180,15 +290,45 @@
         }
       }
 
-       function collapsePay() {
-        const container = document.getElementById("Pay-container");
+      function collapsePay() {
+        const container = document.getElementById("pay-container");
         if (container.style.display == "none") {
           container.style.display = "block";
         } else {
           container.style.display = "none";
         }
       }
-      
     </script>
-  </body>
+    <script>
+      function validationData() {
+        if (document.getElementById("surname").value === "") {
+          alert("請輸入收件人姓氏");
+          return false;
+        }
+        if (document.getElementById("givename").value === "") {
+          alert("請輸入收件人名稱");
+          return false;
+        }
+        if (document.getElementById("email").value === "") {
+          alert("請輸入電郵");
+          return false;
+        }
+        if (document.getElementById("tel").value === "") {
+          alert("請輸入電話");
+          return false;
+        }
+        if (document.getElementById("address").value === "") {
+          alert("請輸入地址");
+          return false;
+        }
+        return true;
+      }
+      function handlePayment() {
+        if (validationData()) {
+          alert("付款成功");
+        }
+      }
+    </script>
+</body>
+
 </html>
