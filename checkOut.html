@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <style>
+      .delbox {
+        border: 1px solid gray;
+        text-align: center;
+        color: gray;
+      }
+
+      .delbox:hover {
+        color: blue;
+        border: 1px solid blue;
+      }
+      .selected {
+        background-color: rgba(3, 218, 218, 0.266);
+        border: 1px solid blue;
+        color: blue;
+      }
+      h4:hover {
+        cursor: pointer;
+      }
+      .info-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2vw;
+      }
+      select {
+         width: 21vw;
+        min-width: 182px;
+        height: 29px;
+      }
+      .info-container input {
+        width: 21vw;
+        min-width: 182px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+    <div style="margin: 0 3vw;">
+      <div>cart details area</div>
+
+      <h4 onclick="collapseDel()">
+        <strong>運送選項</strong><i class="bi bi-file-arrow-down-fill"></i>
+      </h4>
+      <div id="del-container" class="row" style="margin: 0vw;;gap: 1vw; display: none">
+        <div class="delbox" style="width: 30vw; padding: 1em 0em">
+          <h5><b>免費運送</b></h5>
+          <span>1-5個工作天</span><br />
+          <span>砌機: 3-5個工作天</span><br />
+          <span>HK$18</span>
+        </div>
+        <div class="delbox" style="width: 30vw; padding: 1em 0em">
+          <h5><b>特快運送</b></h5>
+          <span>即日 (現貨訂單, 2PM 截單)/1個工作天</span><br />
+          <span>HK$86</span>
+        </div>
+        <div class="delbox" style="width: 30vw; padding: 1em 0em">
+          <h5><b>門巿自取</b></h5>
+          <span>1-5個工作天</span><br />
+          <span>砌機: 3-5個工作天</span>
+        </div>
+      </div>
+      <h4 onclick="collapseInfo()">
+        <strong>收貨人資料</strong><i class="bi bi-file-arrow-down-fill"></i>
+      </h4>
+
+      <div id="info-container" style="display: none">
+        <div class="info-container">
+          <div>
+            <label>收件人姓氏*</label><br />
+            <input /required>
+          </div>
+          <div>
+            <label>收件人名稱*</label><br />
+            <input />
+          </div>
+          <div>
+            <label>電郵*</label><br />
+            <input />
+          </div>
+          <div>
+            <label>電話*</label><br />
+            <input />
+          </div>
+          <div>
+            <label>區域*</label><br />
+            <select>
+              <option>香港</option>
+              <option>九龍</option>
+              <option>新界</option>
+              <option>離島</option>
+            </select>
+          </div>
+          <div>
+            <label>公司/機構名稱</label><br />
+            <input />
+          </div>
+          <div>
+            <label>地址*</label><br />
+            <input />
+          </div>
+          <div>
+            <label>送貨時間 (將盡量安排)</label><br />
+            <select>
+                <option>11:00 AM -6:00 PM</option>
+                <option>6:00 PM -10:00 PM</option>
+                
+            </select>
+          </div>
+        </div>
+    <br>
+        <div>
+          <label>備註</label><br />
+          <textarea style="width: 98%"></textarea>
+        </div>
+      </div>
+      <h4 onclick="collapsePay()">
+        <strong>付款資料</strong><i class="bi bi-file-arrow-down-fill"></i>
+      </h4>
+      <div id="pay-container">
+        <input type="radio">
+        <label style="margin-right: 20px;">Alipay</label>
+         <input type="radio">
+        <label>Credit Card</label>
+      </div>
+      <div>
+        <button>上一步</button>
+        <span
+          >產品總額 : $<span>198</span> 附加費 : $<span>18</span> 總計 : $<span
+            >216</span
+          ></span
+        >
+        <button>下一步</button>
+      </div>
+    </div>
+    </form>
+    
+    <script>
+      const boxs = document.querySelectorAll(".delbox");
+      boxs.forEach((box) => {
+        box.addEventListener("click", () => {
+          boxs.forEach((b) => {
+            b.classList.remove("selected");
+          });
+          box.classList.add("selected");
+        });
+      });
+
+      function collapseDel() {
+        const container = document.getElementById("del-container");
+        if (container.style.display == "none") {
+          container.style.display = "flex";
+        } else {
+          container.style.display = "none";
+        }
+      }
+      function collapseInfo() {
+        const container = document.getElementById("info-container");
+        if (container.style.display == "none") {
+          container.style.display = "block";
+        } else {
+          container.style.display = "none";
+        }
+      }
+
+       function collapsePay() {
+        const container = document.getElementById("Pay-container");
+        if (container.style.display == "none") {
+          container.style.display = "block";
+        } else {
+          container.style.display = "none";
+        }
+      }
+      
+    </script>
+  </body>
+</html>
