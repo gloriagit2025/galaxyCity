@@ -32,9 +32,9 @@ function updateCartPanel() {
     if (showCategory === "全部商品" || data.category === showCategory) {
       let newDiv = document.createElement("div"); //創建div元素
       newDiv.classList.add("row"); //屬性添加bootstrap row
-      newDiv.innerHTML = `<img class="col-3" src="${data.imgUrl}" alt="${data.name
+      newDiv.innerHTML = `<img class="col-sm-3" src="${data.imgUrl}" alt="${data.name
         }">
-       <div class="col-3">
+       <div class="col-sm-6">
         <div>${data.name}</div>
         <div>HK$${data.price}</div>
         <a class="d-block" href="productDetail.html" onclick='setCurrentProduct(${JSON.stringify(data)})' target="_blank">產品詳情</a>
