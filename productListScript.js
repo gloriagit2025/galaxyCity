@@ -7,7 +7,6 @@ let categoryList = document.querySelectorAll("#categoryList li"); //獲取所有
 let showCategory = "全部商品"; //默認顯示分類為全部商品
 let productPanel = document.getElementById("productPanel"); //獲得產品介面元素
 let confirmTips = document.querySelector(".confirmTips"); //獲得購物車確認提示框
-let confirmButton = document.getElementById("closeConfirmBtn"); //獲得確認按鈕
 let productDataList;//產品資料庫列表
 fetch("database.json") //請求讀取該檔案
   .then((response) => response.json()) //獲取的檔案轉為json物件
@@ -38,8 +37,8 @@ function updateCartPanel() {
        <div class="col-3">
         <div>${data.name}</div>
         <div>HK$${data.price}</div>
-        <a href="productDetail.html" onclick='setCurrentProduct(${JSON.stringify(data)})'>產品詳情</a>
-        <button onclick='addToCart(${JSON.stringify(data)})'>加入購物車</button>
+        <a class="d-block" href="productDetail.html" onclick='setCurrentProduct(${JSON.stringify(data)})' target="_blank">產品詳情</a>
+        <button class="d-block btn btn-success" onclick='addToCart(${JSON.stringify(data)})'>加入購物車</button>
        </div>`;
       productPanel.appendChild(newDiv);
     }
@@ -79,7 +78,7 @@ categoryList.forEach((category) => {
   });
 });
 //為購物車關閉按鈕添加點擊隱藏提示框事件
-confirmButton.addEventListener("click", () => {
+document.getElementById("closeConfirmBtn").addEventListener("click", () => {
   confirmTips.style.display = "none"; //隱藏購物車確認提示框
 });
 //設置現時查詢的產品
