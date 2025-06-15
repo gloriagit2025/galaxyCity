@@ -13,7 +13,6 @@ if (localStorage.getItem("cartQuantity")) {
         let showProduct = data[Math.floor(Math.random() * data.length)];
         card.querySelector(".card-img-top").src = showProduct.imgUrl;
         card.querySelector(".card-title").textContent = showProduct.name;
-        card.querySelector(".btn.btn-primary").href = "productDetail.html";
         //設置現時查詢的產品為點擊產品
         card
           .querySelector(".btn.btn-primary")
@@ -22,6 +21,7 @@ if (localStorage.getItem("cartQuantity")) {
               "currentProduct",
               JSON.stringify(showProduct)
             );
+            window.location.href = "productDetail.html";
           });
       });
     });
