@@ -134,7 +134,9 @@
       <div class="cartPaymentPanel" style="margin: 0 3vw; display: none">
         <div id="cartPanel"></div>
         <div class="row justify-content-end">
-          <span class="col-2">產品總計:HK$<span class="cartPaymentPrice">0</span></span>
+          <span class="col-2"
+            >產品總計:HK$<span class="cartPaymentPrice">0</span></span
+          >
           <button
             class="btn btn-warning col-2"
             id="clearCartBtn"
@@ -147,18 +149,30 @@
           <strong>運送選項</strong><i class="bi bi-file-arrow-down-fill"></i>
         </h4>
         <div id="del-container" class="row" style="margin: 0vw; gap: 1vw">
-          <div class="delbox" style="width: 30vw; padding: 1em 0em" onclick="chooseTravelMethod(18)">
+          <div
+            class="delbox"
+            style="width: 30vw; padding: 1em 0em"
+            onclick="chooseTravelMethod(18)"
+          >
             <h5><b>免費運送</b></h5>
             <span>1-5個工作天</span><br />
             <span>砌機: 3-5個工作天</span><br />
             <span>HK$18</span>
           </div>
-          <div class="delbox" style="width: 30vw; padding: 1em 0em" onclick="chooseTravelMethod(86)">
+          <div
+            class="delbox"
+            style="width: 30vw; padding: 1em 0em"
+            onclick="chooseTravelMethod(86)"
+          >
             <h5><b>特快運送</b></h5>
             <span>即日 (現貨訂單, 2PM 截單)/1個工作天</span><br />
             <span>HK$86</span>
           </div>
-          <div class="delbox" style="width: 30vw; padding: 1em 0em" onclick="chooseTravelMethod(0)">
+          <div
+            class="delbox"
+            style="width: 30vw; padding: 1em 0em"
+            onclick="chooseTravelMethod(0)"
+          >
             <h5><b>門巿自取</b></h5>
             <span>1-5個工作天</span><br />
             <span>砌機: 3-5個工作天</span>
@@ -287,14 +301,19 @@
             <br />
           </div>
         </form>
-        <span
-          >產品總額 : $<span class="beforeFeePrice">0</span> 附加費 : $<span
-            class="additionFee"
-            >0</span
+        <hr>
+        <div style="display: flex; justify-content: end;">
+          <span
+            ><b>產品總額 : $<span class="beforeFeePrice">0</span> 附加費 : $<span
+              class="additionFee"
+              >0</span
+            >
+            總計 : HK$<span class="totalPaymentPrice">0</span></b></span
           >
-          總計 : HK$<span class="totalPaymentPrice">0</span></span
-        >
-        <button class="btn btn-primary col-2" onclick="handlePayment()">付款</button>
+          <button style="margin-left: 5px;"  class="btn btn-primary col-2" onclick="handlePayment()">
+            付款
+          </button>
+        </div>
       </div>
       <br />
     </main>
