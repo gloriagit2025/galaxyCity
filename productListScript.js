@@ -1,4 +1,4 @@
-let cartProductList;//購物車列表
+let cartProductList;
 let categoryList = document.querySelectorAll("#categoryList li"); //獲取所有分類按鈕
 let showCategory = "全部商品"; //默認顯示分類為全部商品
 let productPanel = document.getElementById("productPanel"); //獲得產品介面元素
@@ -12,7 +12,6 @@ fetch("database.json") //請求讀取該檔案
   });
 //更新購物車介面
 function updateCartPanel() {
-  JSON.parse(localStorage.getItem("cartProductList")); //從localStorage讀取購物車列表
   //如未有購物車列表則初始化
   if (cartProductList == null) {
     cartProductList = [];
