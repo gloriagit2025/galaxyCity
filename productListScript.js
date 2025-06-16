@@ -12,6 +12,7 @@ fetch("database.json") //請求讀取該檔案
   });
 //更新購物車介面
 function updateCartPanel() {
+  cartProductList = JSON.parse(localStorage.getItem("cartProductList")); //從localStorage讀取購物車列表
   //如未有購物車列表則初始化
   if (cartProductList == null) {
     cartProductList = [];
@@ -21,7 +22,6 @@ function updateCartPanel() {
   cartProductList.forEach((data) => {
     cartQuantity += data.quantity; //累加總數量
   });
-  localStorage.setItem("cartProductList", JSON.stringify(cartProductList)); //將購物車列表存入localStorage
   localStorage.setItem("cartQuantity", cartQuantity); //將購物車數量存入localStorage
   document.querySelector(".cart-count").textContent = cartQuantity; //更新標準購物車數量顯示
   document.querySelector(".cart-count-col").textContent = cartQuantity; //更新手機版購物車數量顯示
@@ -51,6 +51,7 @@ function updateCartPanel() {
 }
 //加入購物車
 function addToCart(product) {
+  cartProductList = JSON.parse(localStorage.getItem("cartProductList")); //從localStorage讀取購物車列表
   //查找產品名字在購物車的序列
   let indexInCartProductList = cartProductList.findIndex(
     (value) => value.name === product.name
@@ -67,6 +68,7 @@ function addToCart(product) {
   } else {
     cartProductList[indexInCartProductList].quantity++; //購物車列表內已有產品名字的數量增加
   }
+  localStorage.setItem("cartProductList", JSON.stringify(cartProductList)); //將購物車列表存入localStorage
   updateCartPanel(); //更新購物車介面
   confirmTips.style.display = "block"; //顯示購物車確認提示框
 }
