@@ -1,5 +1,6 @@
 let cartProductList = JSON.parse(localStorage.getItem("cartProductList")); //從localStorage讀取購物車列表
 let cartPanel = document.getElementById("cartPanel"); //獲得產品介面元素
+let travelFee = 0;
 updateCartPanel();
 function updateCartPanel() {
   cartPanel.innerHTML = ""; //重置產品介面元素為空
@@ -32,10 +33,10 @@ function updateCartPanel() {
   });
   localStorage.setItem("cartProductList", JSON.stringify(cartProductList)); //將購物車列表存入localStorage
   localStorage.setItem("cartQuantity", cartQuantity); //將購物車數量存入localStorage
-  localStorage.setItem("cartTotalPrice", cartTotalPrice); //將購物車總價錢存入localStorage
-  document.querySelector(
-    ".cartPaymentPrice"
-  ).textContent = `總價錢:HK$${localStorage.getItem("cartTotalPrice")}`; //更新購物車數量顯示
+  document.querySelector(".cartPaymentPrice").textContent = cartTotalPrice; //更新購物車價格
+  document.querySelector(".beforeFeePrice").textContent = cartTotalPrice; //更新附加費前價格
+  document.querySelector(".additionFee").textContent = travelFee; //更新費用
+  document.querySelector(".totalPaymentPrice").textContent = cartTotalPrice+travelFee; //更新總費用價格
   document.querySelector(".cart-count").textContent =
     localStorage.getItem("cartQuantity"); //更新購物車數量顯示
   document.querySelector(".cart-count-col").textContent =
@@ -78,6 +79,10 @@ function clearProductQuantity(product) {
 function clearCart() {
   cartProductList = []; //清空購物車列表
   updateCartPanel(); //更新購物車介面
+}
+function chooseTravelMethod(fee) {
+  travelFee = fee;
+  updateCartPanel();
 }
 const boxs = document.querySelectorAll(".delbox");
 boxs.forEach((box) => {

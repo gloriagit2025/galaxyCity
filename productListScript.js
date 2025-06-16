@@ -52,6 +52,10 @@ function updateCartPanel() {
 //加入購物車
 function addToCart(product) {
   cartProductList = JSON.parse(localStorage.getItem("cartProductList")); //從localStorage讀取購物車列表
+  //如未有購物車列表則初始化
+  if (cartProductList == null) {
+    cartProductList = [];
+  }
   //查找產品名字在購物車的序列
   let indexInCartProductList = cartProductList.findIndex(
     (value) => value.name === product.name
