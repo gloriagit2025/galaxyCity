@@ -1,13 +1,9 @@
-let cartProductList = JSON.parse(localStorage.getItem("cartProductList")); //從localStorage讀取購物車列表
-//如未有購物車列表則初始化
-if (cartProductList == null) {
-  cartProductList = [];
-}
+let cartProductList;//購物車列表
 let categoryList = document.querySelectorAll("#categoryList li"); //獲取所有分類按鈕
 let showCategory = "全部商品"; //默認顯示分類為全部商品
 let productPanel = document.getElementById("productPanel"); //獲得產品介面元素
 let confirmTips = document.querySelector(".confirmTips"); //獲得購物車確認提示框
-let productDataList;//產品資料庫列表
+let productDataList; //產品資料庫列表
 fetch("database.json") //請求讀取該檔案
   .then((response) => response.json()) //獲取的檔案轉為json物件
   .then((data) => {
@@ -16,6 +12,11 @@ fetch("database.json") //請求讀取該檔案
   });
 //更新購物車介面
 function updateCartPanel() {
+  JSON.parse(localStorage.getItem("cartProductList")); //從localStorage讀取購物車列表
+  //如未有購物車列表則初始化
+  if (cartProductList == null) {
+    cartProductList = [];
+  }
   let cartQuantity = 0; //重置購物車數量計數器
   //遍歷每個購物車產品
   cartProductList.forEach((data) => {
@@ -32,18 +33,23 @@ function updateCartPanel() {
     if (showCategory === "全部商品" || data.category === showCategory) {
       let newDiv = document.createElement("div"); //創建div元素
       newDiv.classList.add("row"); //屬性添加bootstrap row
-      newDiv.innerHTML = `<img class="col-sm-3" src="${data.imgUrl}" alt="${data.name
-        }">
+      newDiv.innerHTML = `<img class="col-sm-3" src="${data.imgUrl}" alt="${
+        data.name
+      }">
        <div class="col-sm-6">
         <div>${data.name}</div>
         <div>HK$${data.price}</div>
-        <a class="d-block" href="productDetail.html" onclick='setCurrentProduct(${JSON.stringify(data)})' target="_blank">產品詳情</a>
-        <button class="d-block btn btn-success" onclick='addToCart(${JSON.stringify(data)})'>加入購物車</button>
+        <a class="d-block" href="productDetail.html" onclick='setCurrentProduct(${JSON.stringify(
+          data
+        )})' target="_blank">產品詳情</a>
+        <button class="d-block btn btn-success" onclick='addToCart(${JSON.stringify(
+          data
+        )})'>加入購物車</button>
        </div>`;
       productPanel.appendChild(newDiv);
     }
   });
-};
+}
 //加入購物車
 function addToCart(product) {
   //查找產品名字在購物車的序列
@@ -83,5 +89,5 @@ document.getElementById("closeConfirmBtn").addEventListener("click", () => {
 });
 //設置現時查詢的產品
 function setCurrentProduct(product) {
-  localStorage.setItem("currentProduct",JSON.stringify(product));
+  localStorage.setItem("currentProduct", JSON.stringify(product));
 }

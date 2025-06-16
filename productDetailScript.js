@@ -1,5 +1,5 @@
 let currentProduct = JSON.parse(localStorage.getItem("currentProduct"));
-let cartProductList = JSON.parse(localStorage.getItem("cartProductList")); //從localStorage讀取購物車列表
+let cartProductList;//購物車列表
 let productImg = document.getElementById("productImg");
 let productName = document.getElementById("productName");
 let productDescription = document.getElementById("productDescription");
@@ -12,7 +12,7 @@ updateProductDetail(); //更新產品詳細
 //為購物車關閉按鈕添加點擊隱藏提示框事件
 document.getElementById("closeConfirmBtn").addEventListener("click", () => {
     confirmTips.style.display = "none"; //隱藏購物車確認提示框
-});
+  });
 function minusDemandtQuantity() {
     if (demandQunatity > 1) //如果物件數量大於1
     {
@@ -21,10 +21,11 @@ function minusDemandtQuantity() {
     updateProductDetail();//更新產品詳細
 }
 function plusProductQuantity() {
-    demandQunatity++
+    demandQunatity++;
     updateProductDetail();//更新產品詳細
 }
 function addToCart() {
+    cartProductList = JSON.parse(localStorage.getItem("cartProductList")); //從localStorage讀取購物車列表
     //查找產品名字在購物車的序列
     let indexInCartProductList = cartProductList.findIndex(
         (value) => value.name === currentProduct.name
@@ -46,6 +47,7 @@ function addToCart() {
     confirmTips.style.display = "block"; //顯示購物車確認提示框
 }
 function updateProductDetail() {
+    cartProductList = JSON.parse(localStorage.getItem("cartProductList")); //從localStorage讀取購物車列表
     document.getElementById("productPrice").textContent = `HK$${currentProduct.price}`;
     document.getElementById("demandElement").textContent = demandQunatity; //更新需求數量顯示
     let cartQuantity = 0; //重置購物車數量計數器
