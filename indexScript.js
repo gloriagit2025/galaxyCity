@@ -32,5 +32,15 @@ document.getElementById("randomCarousel").addEventListener("slide.bs.carousel", 
     let randomProduct = productDataList[Math.floor(Math.random() * productDataList.length)];
     img.querySelector(".card-img-top").src = randomProduct.imgUrl;
     img.querySelector(".card-title").textContent = randomProduct.name;
+    img.querySelector(".btn.btn-primary").removeEventListener("click");
+    card
+        .querySelector(".btn.btn-primary")
+        .addEventListener("click", () => {
+          localStorage.setItem(
+            "currentProduct",
+            JSON.stringify(showProduct)
+          );
+          window.location.href = "productDetail.html";
+        });
   });
 })
