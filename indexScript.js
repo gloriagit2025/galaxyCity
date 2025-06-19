@@ -17,13 +17,13 @@ fetch("database.json") //請求讀取該檔案
       //設置現時查詢的產品為點擊產品
       card
         .querySelector(".btn.btn-primary")
-        .addEventListener("click", () => {
+        .onclick= () =>{
           localStorage.setItem(
             "currentProduct",
             JSON.stringify(showProduct)
           );
           window.open("productDetail.html", "_blank");
-        });
+        ;}
     });
   });
 document.getElementById("randomCarousel").addEventListener("slide.bs.carousel", (event) => {
@@ -33,14 +33,14 @@ document.getElementById("randomCarousel").addEventListener("slide.bs.carousel", 
     img.querySelector(".card-img-top").src = randomProduct.imgUrl;
     img.querySelector(".card-title").textContent = randomProduct.name;
     img.querySelector(".btn.btn-primary").removeEventListener("click");
-    card
+    img
         .querySelector(".btn.btn-primary")
-        .addEventListener("click", () => {
+        .onclick = () =>{
           localStorage.setItem(
             "currentProduct",
-            JSON.stringify(showProduct)
+            JSON.stringify(randomProduct)
           );
           window.open("productDetail.html", "_blank");
-        });
+        ;}
   });
 })
