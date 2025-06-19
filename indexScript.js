@@ -22,7 +22,7 @@ fetch("database.json") //請求讀取該檔案
             "currentProduct",
             JSON.stringify(showProduct)
           );
-          window.location.href = "productDetail.html";
+          window.open("productDetail.html", "_blank");
         });
     });
   });
@@ -40,7 +40,7 @@ document.getElementById("randomCarousel").addEventListener("slide.bs.carousel", 
             "currentProduct",
             JSON.stringify(showProduct)
           );
-          window.location.href = "productDetail.html";
+          window.open("productDetail.html", "_blank");
         });
   });
 })
