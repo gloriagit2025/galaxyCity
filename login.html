@@ -22,7 +22,7 @@
         justify-content: center;
       }
 
-      .login-form{
+      .login-form {
         background-color: #f8fafc;
         border-color: #007bff;
         padding: 20px;
@@ -37,9 +37,9 @@
       .login-center {
         display: flex;
         justify-content: center;
-        align-items: center
+        align-items: center;
       }
-     
+
       .form-container {
         display: flex;
         justify-content: center;
@@ -76,7 +76,7 @@
       .login-btn:hover {
         background-color: #0056b3;
       }
-      
+
       .register-link {
         margin-top: 10px;
         font-size: 14px; /* 較小的字體 */
@@ -99,6 +99,7 @@
         }
       }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <!-- 導航列 -->
@@ -113,9 +114,12 @@
           >
         </h1>
         <div>
-           <a href="cartPage.html" class="cart-icon"
-                ><img src="./img/shoppingCart.png" height="40"
-              /><span class="cart-count-col">0</span></a>
+          <a href="cartPage.html" class="cart-icon"
+            ><img src="./img/shoppingCart.png" height="40" /><span
+              class="cart-count-col"
+              >0</span
+            ></a
+          >
           <button
             class="navbar-toggler"
             type="button"
@@ -149,8 +153,11 @@
             </li>
             <li>
               <a href="cartPage.html" class="cart-icon"
-                ><img src="./img/shoppingCart.png" height="50"
-              /><span class="cart-count">0</span></a>
+                ><img src="./img/shoppingCart.png" height="50" /><span
+                  class="cart-count"
+                  >0</span
+                ></a
+              >
             </li>
           </ul>
         </nav>
@@ -172,32 +179,30 @@
     </header>
     <!-- 導航列end -->
 
-
     <main class="login-center">
-      
       <div class="login-container">
         <div class="login-form">
           <h3 style="color: #363d50">登入</h3>
-          <br>
+          <br />
           <div class="form-container">
             <table>
               <tr>
                 <td style="color: #363d50"><b>用戶名稱</b></td>
               </tr>
               <tr>
-                <td><input type="text" placeholder="輸入用戶名稱" /></td>
+                <td><input id="userName" type="text" placeholder="輸入用戶名稱" /></td>
               </tr>
               <tr>
                 <td style="color: #363d50"><b>密碼</b></td>
               </tr>
               <tr>
-                <td><input type="password" placeholder="輸入密碼" /></td>
+                <td><input id="password" type="password" placeholder="輸入密碼" /></td>
               </tr>
             </table>
           </div>
-          <button class="login-btn">LOGIN</button>
-          <br>
-          <br>
+          <button class="login-btn" onclick="loginSubmit()"">LOGIN</button>
+          <br />
+          <br />
           <div>
             <span style="color: #363d50; font-size: 14px">尚未成為會員?</span
             ><a href="./register.html" class="register-link"><b>立即註冊</b></a>
@@ -217,10 +222,35 @@
       crossorigin="anonymous"
     ></script>
     <script>
-    if (localStorage.getItem("cartQuantity")) {
-      document.querySelector(".cart-count").textContent = localStorage.getItem("cartQuantity"); //更新購物車數量顯示
-      document.querySelector(".cart-count-col").textContent = localStorage.getItem("cartQuantity"); //更新手機版購物車數量顯示
-    }
-  </script>
+      if (localStorage.getItem("cartQuantity")) {
+        document.querySelector(".cart-count").textContent =
+          localStorage.getItem("cartQuantity"); //更新購物車數量顯示
+        document.querySelector(".cart-count-col").textContent =
+          localStorage.getItem("cartQuantity"); //更新手機版購物車數量顯示
+      }
+      async function loginSubmit(){
+        const userName=document.getElementById("userName").value;
+        const password=document.getElementById("password").value;
+        
+        if(userName!==""&& password!==""){
+          const data={"name":userName,"password":password}
+          try{
+            const rep=await axios.post("http://192.168.1.121:8080/login",data)
+            console.log(rep)
+            if(rep.data.message==="login success"){
+              alert("login success");
+            }else{
+          alert("Invalid user name or password")
+        }
+       
+          } catch(e){
+            console.log(e);
+            alert("login failed")
+          }
+        }else{
+          alert("Invalid user name or password")
+        }
+      }
+    </script>
   </body>
 </html>

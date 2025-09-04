@@ -86,9 +86,9 @@
       .register-center {
         display: flex;
         justify-content: center;
-        align-items: center
+        align-items: center;
       }
-      
+
       @media (max-width: 600px) {
         .modal {
           width: 95%;
@@ -102,10 +102,10 @@
         }
       }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-   
-   <!-- 導航列 -->
+    <!-- 導航列 -->
 
     <header class="sticky-top">
       <!-- collapse container -->
@@ -117,9 +117,12 @@
           >
         </h1>
         <div>
-           <a href="cartPage.html" class="cart-icon"
-                ><img src="./img/shoppingCart.png" height="40"
-              /><span class="cart-count-col">0</span></a>
+          <a href="cartPage.html" class="cart-icon"
+            ><img src="./img/shoppingCart.png" height="40" /><span
+              class="cart-count-col"
+              >0</span
+            ></a
+          >
           <button
             class="navbar-toggler"
             type="button"
@@ -153,8 +156,11 @@
             </li>
             <li>
               <a href="cartPage.html" class="cart-icon"
-                ><img src="./img/shoppingCart.png" height="50"
-              /><span class="cart-count">0</span></a>
+                ><img src="./img/shoppingCart.png" height="50" /><span
+                  class="cart-count"
+                  >0</span
+                ></a
+              >
             </li>
           </ul>
         </nav>
@@ -176,13 +182,12 @@
     </header>
     <!-- 導航列end -->
 
-
     <main class="register-center">
       <div class="login-container">
         <div class="login-form">
           <h3 style="color: #363d50">用戶註冊</h3>
           <br />
-          <div class="form-container">
+          <div class="form-container" >
             <table>
               <tr>
                 <td style="color: #363d50">
@@ -263,7 +268,7 @@
               </tr>
             </table>
           </div>
-          <button class="login-btn" type="submit">註冊帳戶</button>
+          <button class="login-btn" type="submit" onclick="submitForm()">註冊帳戶</button>
           <br />
           <br />
           <div>
@@ -285,10 +290,45 @@
       crossorigin="anonymous"
     ></script>
     <script>
-    if (localStorage.getItem("cartQuantity")) {
-      document.querySelector(".cart-count").textContent = localStorage.getItem("cartQuantity"); //更新購物車數量顯示
-      document.querySelector(".cart-count-col").textContent = localStorage.getItem("cartQuantity"); //更新手機版購物車數量顯示
-    }
-  </script>
+      if (localStorage.getItem("cartQuantity")) {
+        document.querySelector(".cart-count").textContent =
+          localStorage.getItem("cartQuantity"); //更新購物車數量顯示
+        document.querySelector(".cart-count-col").textContent =
+          localStorage.getItem("cartQuantity"); //更新手機版購物車數量顯示
+      }
+      async function submitForm(){
+        const userName=document.getElementById("username").value;
+        const email=document.getElementById("email").value;
+        const password=document.getElementById("password").value;
+        const confirmPassword=document.getElementById("confirmPassword").value;
+        if(userName!=="" && email!=="" && password!=="" && password!==""){
+          if(password===confirmPassword){ 
+            const data={"name":userName,"email":email,"password":password}
+            document.getElementById("username").value="";
+            document.getElementById("email").value="";
+            document.getElementById("password").value="";
+            document.getElementById("confirmPassword").value="";
+            try{
+              const rep=await axios.post("http://192.168.1.121:8080/reg",data);
+              if(rep.data.message==="save succes"){
+                alert("Register Success!")
+              }else{
+                alert("existing user")
+              }
+              
+            }catch(e){
+              console.log(e);
+              alert("Register Failed!")
+            }
+            
+
+          }else{
+            alert("incorrect password")
+          }
+        }else{
+          alert("Please fill in all fields");
+        }
+      }
+    </script>
   </body>
 </html>
