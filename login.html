@@ -236,7 +236,7 @@
           const data={"name":userName,"password":password}
           try{
            // const rep=await axios.post("http://192.168.1.121:8080/login",data)
-           const rep=await axios.post("https://galaxy-city-backend.vercel.app/login",data);
+           const rep=await axios.post("https://galacy-city-backend.vercel.app/login",data);
             console.log(rep)
             if(rep.data.message==="login success"){
               alert("login success");

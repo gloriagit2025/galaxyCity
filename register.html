@@ -310,7 +310,7 @@
             document.getElementById("confirmPassword").value="";
             try{
               //const rep=await axios.post("http://192.168.1.121:8080/reg",data);
-              const rep=await axios.post("https://galaxy-city-backend.vercel.app/",data);
+              const rep=await axios.post("https://galacy-city-backend.vercel.app/reg",data);
               
               if(rep.data.message==="save succes"){
                 alert("Register Success!")
