@@ -214,7 +214,6 @@
     <div class="container">© 2025 銀河電腦城．版權所有</div>
   </footer>
 
-<<<<<<< HEAD
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"></script>
@@ -254,32 +253,6 @@
             if(localStorage.getItem("prePage")){
               window.location.href = localStorage.getItem("prePage");
               localStorage.removeItem('prePage');
-=======
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      if (localStorage.getItem("cartQuantity")) {
-        document.querySelector(".cart-count").textContent =
-          localStorage.getItem("cartQuantity"); //更新購物車數量顯示
-        document.querySelector(".cart-count-col").textContent =
-          localStorage.getItem("cartQuantity"); //更新手機版購物車數量顯示
-      }
-      async function loginSubmit(){
-        const userName=document.getElementById("userName").value;
-        const password=document.getElementById("password").value;
-        
-        if(userName!==""&& password!==""){
-          const data={"name":userName,"password":password}
-          try{
-           // const rep=await axios.post("http://192.168.1.121:8080/login",data)
-           const rep=await axios.post("https://galacy-city-backend.vercel.app/login",data);
-            console.log(rep)
-            if(rep.data.message==="login success"){
-              alert("login success");
->>>>>>> e64ef1a440f4b9a58886c5063fb28c0fa34b566a
             }else{
               window.location.href = '/galaxyCity/profile.html';
             }
