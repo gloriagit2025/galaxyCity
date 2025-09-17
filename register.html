@@ -259,15 +259,16 @@
           document.getElementById("password").value = "";
           document.getElementById("confirmPassword").value = "";
           try {
-            // const rep=await axios.post("http://192.168.1.121:8080/reg",data);
+            //const rep = await axios.post("http://192.168.1.121:8080/reg", data);
             const rep = await axios.post("https://galacy-city-backend.vercel.app/reg", data,{
               headers: {
                 'Content-Type': 'application/json'
               }
             });
 
-            if (rep.data.message === "save success") {
-              alert("Register Success!")
+            if (rep.data.name) {
+              localStorage.setItem("user", JSON.stringify(rep.data));
+              window.location.href = '/galaxyCity/profile.html';
             } else {
               alert("existing user")
             }

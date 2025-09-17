@@ -184,7 +184,18 @@
             </tr>
             <tr>
               <td><input id="password" type="password" placeholder="輸入密碼" /></td>
+             
             </tr>
+            <!-- <tr> <td>
+              <input id="dataInput" value="0">
+              <svg id="date" xmls="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" 
+              stroke-width="2" fill="none" stroke-lineup="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <line x1="5" y1="12" x2="9" y2="16"></line>
+              <line x1="5" y1="12" x2="9" y2="8"></line>
+            </svg> </td></tr> -->
+            
           </table>
         </div>
         <button class="login-btn" onclick="loginSubmit()"">LOGIN</button>
@@ -213,6 +224,12 @@
       document.querySelector(".cart-count-col").textContent =
         localStorage.getItem("cartQuantity"); //更新手機版購物車數量顯示
     }
+    // document.getElementById('date').addEventListener('click',()=>{
+    //   const dataInput=document.getElementById('dataInput')
+    //   dataInput.value=Number(dataInput.value)+1;
+    // })
+   
+
     async function loginSubmit() {
       const userName = document.getElementById("userName").value;
       const password = document.getElementById("password").value;
@@ -224,15 +241,24 @@
           //   headers: {
           //     'Content-Type': 'application/json'
           //   }
-          // })
+          // });
           const rep = await axios.post("https://galacy-city-backend.vercel.app/login", data, {
               headers: {
                   'Content-Type': 'application/json'
               }
           });
-          console.log(rep)
-          if (rep.data.message === "login success") {
-            alert("login success");
+         // console.log(rep)
+          if (rep.data.name) {
+            localStorage.setItem("user",JSON.stringify(rep.data));
+            if(localStorage.getItem("prePage")){
+              window.location.href = localStorage.getItem("prePage");
+              localStorage.removeItem('prePage');
+            }else{
+              window.location.href = '/galaxyCity/profile.html';
+            }
+            
+           // alert("login success");
+             
           } else {
             alert("Invalid user name or password")
           }
