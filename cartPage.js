@@ -50,6 +50,13 @@ function updateCartPanel() {
     document.querySelector(".cartPaymentPanel").style.display = "block"; //顯示購物車結帳介面
   }
 }
+
+let currentUser;
+if(localStorage.getItem('user')){
+   currentUser=JSON.parse(localStorage.getItem('user'))
+}else{
+    window.location.href = '/galaxyCity/login.html';
+}
 function minusProductQuantity(product) {
   let indexInCartProductList = cartProductList.findIndex(
     (value) => value.name === product.name
@@ -156,7 +163,13 @@ function handlePayment() {
   }
 
   if (valid) {
-    alert("交易成功");
+    if(localStorage.getItem('user')){
+      alert("交易成功");
     localStorage.removeItem("cartProductList");
+    }else{
+      localStorage.setItem("prePage",'/galaxyCity/cartPage.html')
+      window.location.href='/galaxyCity/login.html'
+    }
+    
   }
 }
