@@ -11,5 +11,5 @@ function logout() {
     localStorage.removeItem("user");
     document.querySelector('.logined').style.display='none';
    document.querySelector('.unlogined').style.display='flex';
-    window.location.href = '/galaxyCity/login.html';
+    window.location.href = '/login.html';
 }
