@@ -262,7 +262,7 @@
             document.getElementById("userNameData").textContent = user.name;
             document.getElementById("emailData").textContent = user.email;
         } else {
-            window.location.href = '/galaxyCity/login.html';
+            window.location.href = '/login.html';
         }
         let isEdit = false;
         function EditProfile() {
@@ -290,7 +290,7 @@
 
         function logout(){
             localStorage.removeItem("user");
-             window.location.href = '/galaxyCity/login.html';
+             window.location.href = '/login.html';
         }
     </script>
 </body>
