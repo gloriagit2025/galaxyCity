@@ -51,7 +51,6 @@ function updateCartPanel() {
   }
 }
 
-
 function minusProductQuantity(product) {
   let indexInCartProductList = cartProductList.findIndex(
     (value) => value.name === product.name
