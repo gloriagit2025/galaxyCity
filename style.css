@@ -168,6 +168,14 @@ footer {
   align-content: center;
 }
 
+.login-status{
+  cursor: pointer;
+}
+.login-status a:hover {
+  color: #b39ddb;
+  
+}
+
 
 
 

@@ -99,8 +99,8 @@
             <li><a href="productList.html">產品目錄</a></li>
             <li><a href="builder.html">自選砌機報價</a></li>
             <li><a href="about.html">關於我們</a></li>
-            <li>
-              <a href="login.html">登入</a> | <a href="register.html">註冊</a>
+            <li id="loginStatus">
+              <a href="login.html" >登入</a> | <a href="register.html">註冊</a>
             </li>
             <li>
               <a href="cartPage.html" class="cart-icon"
@@ -120,9 +120,12 @@
           <li><a href="productList.html">產品目錄</a></li>
           <li><a href="builder.html">自選砌機報價</a></li>
           <li><a href="about.html">關於我們</a></li>
-          <li>
+          <li id="loginStatusCol">
             <a href="login.html">登入</a> |
             <a href="register.html">註冊</a>
+          </li>
+          <li>
+            <a onclick="logout()" >登出</a> 
           </li>
         </ul>
       </div>
@@ -326,6 +329,8 @@
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
+     <script src="cartPage.js"></script>
+     <script src="headerbar.js"></script>
   </body>
-  <script src="cartPage.js"></script>
+ 
 </html>

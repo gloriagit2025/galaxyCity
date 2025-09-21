@@ -50,6 +50,8 @@ function updateCartPanel() {
     document.querySelector(".cartPaymentPanel").style.display = "block"; //顯示購物車結帳介面
   }
 }
+
+
 function minusProductQuantity(product) {
   let indexInCartProductList = cartProductList.findIndex(
     (value) => value.name === product.name
@@ -156,7 +158,13 @@ function handlePayment() {
   }
 
   if (valid) {
-    alert("交易成功");
+    if(localStorage.getItem('user')){
+      alert("交易成功");
     localStorage.removeItem("cartProductList");
+    }else{
+      localStorage.setItem("prePage",'/cartPage.html')
+      window.location.href='/login.html'
+    }
+    
   }
 }

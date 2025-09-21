@@ -46,9 +46,9 @@
           <li><a href="productList.html">產品目錄</a></li>
           <li><a href="builder.html">自選砌機報價</a></li>
           <li><a href="about.html">關於我們</a></li>
-          <li>
-            <a href="login.html">登入</a> | <a href="register.html">註冊</a>
-          </li>
+           <li id="loginStatus">
+              <a href="login.html" >登入</a> | <a href="register.html">註冊</a>
+            </li>
           <li>
             <a href="cartPage.html" class="cart-icon"><img src="./img/shoppingCart.png" height="50" /><span
                 class="cart-count">0</span></a>
@@ -63,7 +63,7 @@
         <li><a href="productList.html">產品目錄</a></li>
         <li><a href="builder.html">自選砌機報價</a></li>
         <li><a href="about.html">關於我們</a></li>
-        <li>
+        <li id="loginStatusCol">
           <a href="login.html">登入</a> |
           <a href="register.html">註冊</a>
         </li>
@@ -175,6 +175,7 @@
         localStorage.getItem("cartQuantity"); //更新手機版購物車數量顯示
     }
   </script>
+  <script src="headerbar.js"></script>
 </body>
 
 </html>
